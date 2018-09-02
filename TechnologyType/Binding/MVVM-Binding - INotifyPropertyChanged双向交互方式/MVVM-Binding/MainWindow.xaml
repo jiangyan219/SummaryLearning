@@ -1,0 +1,49 @@
+﻿<Window x:Class="MVVM_Binding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="clr-namespace:MVVM_Binding.ViewModel"        
+        Title="MainWindow" 
+        Height="350" 
+        Width="525">
+    <Grid x:Name="grid1" >
+        
+        <TextBox Height="23" 
+                 HorizontalAlignment="Left" 
+                 Margin="71,42,0,0" 
+                 Name="textBox1" 
+                 VerticalAlignment="Top" 
+                 Width="120" 
+                 Text="{Binding Path= Name,Mode=TwoWay}"
+                 />
+        <TextBox Height="23" 
+                 HorizontalAlignment="Left" 
+                 Margin="71,81,0,0" 
+                 Name="textBox2" 
+                 VerticalAlignment="Top" 
+                 Width="120" 
+                 Text="{Binding Path= Char,Mode=TwoWay}"
+                 />
+        <TextBox Height="23" 
+                 HorizontalAlignment="Left" 
+                 Margin="71,123,0,0" 
+                 Name="textBox3" 
+                 VerticalAlignment="Top" 
+                 Width="120" 
+                 Text="{Binding Path= Len}"
+                 />
+        <Button Content="测试" 
+                Height="23" 
+                HorizontalAlignment="Left" 
+                Margin="221,42,0,0" 
+                Name="button1" 
+                VerticalAlignment="Top" 
+                Width="75" Click="button1_Click" />
+        <Button Content="测试2" 
+                Height="23" 
+                HorizontalAlignment="Left" 
+                Margin="221,78,0,0" 
+                Name="button2" 
+                VerticalAlignment="Top" 
+                Width="75" Click="button2_Click" />
+    </Grid>
+</Window>

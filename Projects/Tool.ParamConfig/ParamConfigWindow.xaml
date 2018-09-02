@@ -1,0 +1,172 @@
+﻿<Window x:Class="Tool.ParamConfig.ParamConfigWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:model="clr-namespace:Utility.Circuit.Model;assembly=Utility.Circuit.Model"
+        xmlns:local="clr-namespace:Tool.ParamConfig"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="系统参数配置" 
+        Height="700" 
+        Width="1024" Loaded="Window_Loaded"
+        >
+
+    <Window.Resources>
+        <Style TargetType="TreeViewItem">
+            <Style.Resources>
+                <LinearGradientBrush x:Key="ItemAreaBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
+                    <GradientStop Color="#00000000" Offset="0" />
+                    <GradientStop Color="#00000000" Offset="1" />
+                </LinearGradientBrush>
+                <LinearGradientBrush x:Key="SelectedItemAreaBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
+                    <GradientStop Color="Orange" Offset="0" />
+                    <GradientStop Color="OrangeRed" Offset="1" />
+                </LinearGradientBrush>
+                <LinearGradientBrush x:Key="ItemBorderBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
+                    <GradientStop Color="LightGray" Offset="0" />
+                    <GradientStop Color="Gray" Offset="1" />
+                </LinearGradientBrush>
+                <LinearGradientBrush x:Key="SelectedItemBorderBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
+                    <GradientStop Color="Yellow" Offset="0" />
+                    <GradientStop Color="Black" Offset="1" />
+                </LinearGradientBrush>
+                <DropShadowBitmapEffect x:Key="DropShadowEffect" />
+            </Style.Resources>
+            <Setter Property="Cursor" Value ="Hand"/>
+            <Setter Property="IsSelected" Value ="{Binding Path=IsSelected,Mode=TwoWay}"/>
+            <!-- Make each TreeViewItem show it's children in a horizontal StackPanel. -->
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <StackPanel VerticalAlignment="Center"
+                                    HorizontalAlignment="Center" IsItemsHost="True" 
+                                    Margin="10,2" 
+                                    Orientation="Vertical" />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate x:Name="Parent" TargetType="TreeViewItem">
+                        <Grid Margin="2" MinWidth="180" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" Name="Bd" BorderThickness="0.6" Padding="6,6" 
+                                    Tag="{Binding ElementName=PART_Header}"
+                                    TextBlock.Foreground="White"
+                                    TextBlock.FontSize="13">
+                                <ContentPresenter Name="PART_Header" ContentSource="Header" 
+                                                  HorizontalAlignment="Left" 
+                                                  VerticalAlignment="Center"
+                                                  Margin="8,0,0,0"/>
+                            </Border>
+
+                            <!--<Label x:Name="BtnArrow" Width="25" Height="15" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"
+                                   Style="{DynamicResource PresetDownArrowStyle}" 
+                                   PreviewMouseDown="Tree_MouseDown" Tag="{Binding ElementName=PART_Header}" IsEnabled="False"></Label>-->
+
+                            <!--{RelativeSource FindAncestor,AncestorType={x:Type TreeViewItem},AncestorLevel=2}}<-->
+                            <ItemsPresenter x:Name="GridChild" Grid.Row="1"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <!--When the item is selected in the TreeView, use the "selected" colors and give it a drop shadow. -->
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Bd" Property="Panel.Background" Value="#255c83" />
+
+                                <Setter Property="IsExpanded"  Value="True"/>
+                            </Trigger>
+                            <!--<MultiTrigger>
+                                 <MultiTrigger.Conditions>
+                                     <Condition Property="HasItems"  Value="true"/>
+                                     <Condition Property="IsExpanded"  Value="true"/>
+                                 </MultiTrigger.Conditions>
+                                 <Setter TargetName="GridChild"  Property="Visibility"  Value="Collapsed"/>
+                             </MultiTrigger>-->
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter Property="IsExpanded"  Value="False"/>
+                            </Trigger>
+                            <!--<Trigger Property="HasItems"  Value="false">
+                                <Setter TargetName="BtnArrow"  Property="Visibility"  Value="Hidden"/>
+                            </Trigger>
+                            <Trigger Property="HasItems"  Value="true">
+                                <Setter TargetName="BtnArrow"  Property="Visibility"  Value="Visible"/>
+                            </Trigger>-->
+
+                            <Trigger Property="IsExpanded" Value="false">
+                                <Setter TargetName="GridChild"  Property="Visibility"  Value="Collapsed"/>
+                            </Trigger>
+                            <Trigger Property="IsExpanded" Value="True">
+                                <Setter TargetName="GridChild"  Property="Visibility"  Value="Visible"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <HierarchicalDataTemplate DataType="{x:Type model:TTreeMenu}"
+                                  ItemsSource="{Binding Children}" >
+            <Grid Background="Transparent">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Width="16" Margin="0,2,5,0"
+                                       Source="{Binding Path=Icon}" />
+                <TextBlock Grid.Column="1" Text="{Binding Path=Name}"
+                                           FontSize="15" Foreground="White" 
+                                           VerticalAlignment="Center"/>
+            </Grid>
+        </HierarchicalDataTemplate>
+
+
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="210"/>
+            <ColumnDefinition Width="1"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Background="#828282">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <TextBlock Text="SHDQ参数库" HorizontalAlignment="Center"
+                           VerticalAlignment="Center" Foreground="White"
+                           FontSize="15"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto">
+                    <TreeView x:Name="menuTree" Background="#828282"
+                          ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                          BorderBrush="Transparent" 
+                          BorderThickness="0"
+                          Margin="0,0,2,0"
+                          SelectedItemChanged="menuTree_SelectedItemChanged">
+                    </TreeView>
+                </ScrollViewer>
+
+            </Grid>
+        </Grid>
+
+        <Border Grid.Column="1" BorderBrush="#c2c2c2" Background="#929292"></Border>
+
+        <ScrollViewer Grid.Column="2" Margin="-1,-1,-1,-1" 
+                      HorizontalScrollBarVisibility="Disabled"
+                      VerticalScrollBarVisibility="Disabled">
+            <Grid x:Name="gdContainer" >
+            </Grid>
+        </ScrollViewer>
+
+    </Grid>
+</Window>

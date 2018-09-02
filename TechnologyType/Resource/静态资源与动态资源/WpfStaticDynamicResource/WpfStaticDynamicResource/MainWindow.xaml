@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfStaticDynamicResource.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Window.Resources>
+        <TextBlock x:Key="Res1" Text="海上生明月" />
+        <TextBlock x:Key="Res2" Text="海上生明月" />
+    </Window.Resources>
+
+    <Grid>
+        <Button Content="{StaticResource Res1}" 
+                Height="23" 
+                HorizontalAlignment="Left" 
+                Margin="121,23,0,0" 
+                Name="button1" 
+                VerticalAlignment="Top" 
+                Width="220" />
+        <Button Content="{DynamicResource Res2}" 
+                Height="23" 
+                HorizontalAlignment="Left" 
+                Margin="121,60,0,0" 
+                Name="button2" 
+                VerticalAlignment="Top" 
+                Width="220" />
+        <Button Content="Button" 
+                Height="23" 
+                HorizontalAlignment="Left" 
+                Margin="121,99,0,0" 
+                Name="button3" 
+                VerticalAlignment="Top" 
+                Width="220" Click="button3_Click" />
+    </Grid>
+</Window>

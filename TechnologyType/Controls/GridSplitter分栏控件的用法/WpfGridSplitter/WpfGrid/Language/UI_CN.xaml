@@ -1,0 +1,1493 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!--  -->
+    <sys:String x:Key="Module_MainWindow">主窗口</sys:String>
+    <sys:String x:Key="Module_VersionWindow">版本窗口</sys:String>
+    <sys:String x:Key="Module_PatientRequest">病人申请</sys:String>
+    <sys:String x:Key="Module_PriorityPatientRequest">紧急病人申请</sys:String>
+    <sys:String x:Key="Module_PatientRequest_PatientInfo">病人信息</sys:String>
+    <sys:String x:Key="Module_PatientRequest_AddToItemSet">添加项目</sys:String>
+    <sys:String x:Key="Module_QC_ControlManage">质控管理</sys:String>
+    <sys:String x:Key="Module_ItemSet">项目设置</sys:String>
+    <sys:String x:Key="Module_Calibrate">定标</sys:String>
+    <sys:String x:Key="Module_CalculatorManager">定标管理</sys:String>
+    <sys:String x:Key="Module_Test_Monitor">测试监控</sys:String>
+    <sys:String x:Key="Module_Parameter">参数</sys:String>
+    <sys:String x:Key="Module_Maintenance">维护</sys:String>
+    <sys:String x:Key="Tester_RackCtrl">用户</sys:String>
+    <sys:String x:Key="Tester_TestAbortProcessor">用户操作记录</sys:String>
+    <sys:String x:Key="Tester_CTester">用户名</sys:String>
+    <sys:String x:Key="Tester_TesterDataMng">用户管理</sys:String>
+    <sys:String x:Key="Tester_TestRequestFilter">测试数据文件</sys:String>
+    <sys:String x:Key="Backup_Parameter">备份参数</sys:String>
+    <sys:String x:Key="Restore_Parameter">恢复参数</sys:String>
+    <sys:String x:Key="Priming_RDT1">温育区初始化</sys:String>
+    <sys:String x:Key="Priming_RgtStore">试剂区初始化</sys:String>
+    <sys:String x:Key="Priming_DevicePrepare">仪器初始化</sys:String>
+    <sys:String x:Key="Module_Test_LisManager">LisManager</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="MainWindow_Title">AE-240商品機</sys:String>
+    <sys:String x:Key="MainWindow_btnPrime">启动</sys:String>
+    <sys:String x:Key="MainWindow_btnTestRequest">测试请求</sys:String>
+    <sys:String x:Key="MainWindow_btnTest">测试</sys:String>
+    <sys:String x:Key="MainWindow_btnDataProcess">数据处理</sys:String>
+    <sys:String x:Key="MainWindow_btnParam">参数</sys:String>
+    <sys:String x:Key="MainWindow_btnMaintaince">维护</sys:String>
+    <sys:String x:Key="MainWindow_btnExit">退出</sys:String>
+    <sys:String x:Key="MainWindow_btnEmergencyStop">紧急停机</sys:String>
+    <sys:String x:Key="MainWindow_btnPrint">打印</sys:String>
+    <sys:String x:Key="MainWindow_MsgExit">确认退出?</sys:String>
+    <sys:String x:Key="MainWindow_ReconnectLis">是否重新连接LIS?</sys:String>
+    <sys:String x:Key="MainWindow_btnMin">最小化</sys:String>
+    <!--  -->
+    <sys:String x:Key="WindowUser">切换用户</sys:String>
+    <sys:String x:Key="WindowUser_lblPassword">密码:</sys:String>
+    <sys:String x:Key="WindowUser_btnModify">设置密码</sys:String>
+    <sys:String x:Key="WindowUser_btnExchange">切换角色</sys:String>
+    <sys:String x:Key="WindowUser_btnClose">关闭</sys:String>
+    <sys:String x:Key="UserName">普通用户</sys:String>
+    <sys:String x:Key="AdminName">管理员</sys:String>
+    <sys:String x:Key="MaintainerName">维护人员</sys:String>
+
+    <sys:String x:Key="PasswordWindow_rbAdmin">管理员</sys:String>
+    <sys:String x:Key="PasswordWindow_rbMain">维护人员</sys:String>
+    <sys:String x:Key="PasswordWindow">设置密码</sys:String>
+    <sys:String x:Key="PasswordWindow_lblOldPassword">旧密码:</sys:String>
+    <sys:String x:Key="PasswordWindow_lblNewPassword">新密码:</sys:String>
+    <sys:String x:Key="PasswordWindow_lblConfirm">确认密码:</sys:String>
+    <sys:String x:Key="PasswordWindow_btnOK">确定</sys:String>
+    <sys:String x:Key="PasswordWindow_btnCancel">取消</sys:String>
+
+
+    <!--  -->
+    <sys:String x:Key="PagePriming_tabPrepare">设备准备</sys:String>
+    <sys:String x:Key="PagePriming_tabReagentTable">试剂盘</sys:String>
+    <sys:String x:Key="PagePriming_tabReagentTable2">试剂2盘</sys:String>
+    <sys:String x:Key="PagePriming_tabReagentStore">试剂瓶</sys:String>
+    <sys:String x:Key="PagePriming_tabItemEdit">项目设置</sys:String>
+
+    <sys:String x:Key="UcDevicePrepare_lblWAT_Full">废液满</sys:String>
+    <sys:String x:Key="UcDevicePrepare_lblWTT_Emp">清洗分离液空</sys:String>
+    <sys:String x:Key="UcDevicePrepare_lblWWT_Emp">清洗液空</sys:String>
+    <sys:String x:Key="UcDevicePrepare_lblWDT_Emp">强化清洗液空</sys:String>
+    <sys:String x:Key="UcDevicePrepare_lbllblWBFT_Emp">洗针液空</sys:String>
+    <sys:String x:Key="UcDevicePrepare_lblWW2T_Emp">清洗液2空</sys:String>
+    <sys:String x:Key="UcDevicePrepare_grpInfo">液面信息</sys:String>
+    <sys:String x:Key="UcDevicePrepare_grpTotal">监控信息</sys:String>
+    <sys:String x:Key="UcDevicePrepare_lblProgress">测试信息</sys:String>
+    <sys:String x:Key="UcDevicePrepare_btnExcute">执行</sys:String>
+    <sys:String x:Key="UcDevicePrepare_btnEdit">编辑</sys:String>
+    <sys:String x:Key="UcDevicePrepare_chkAllStandby">仪器初始化</sys:String>
+    <sys:String x:Key="UcDevicePrepare_chkFlushLine">冲洗管路</sys:String>
+    <sys:String x:Key="UcDevicePrepare_chkR1R2Table">R1R2R4检测</sys:String>
+    <sys:String x:Key="UcDevicePrepare_chkR3Table">R3检测</sys:String>
+    <sys:String x:Key="UcDevicePrepare_chkDilu">稀释液检测</sys:String>
+
+    <sys:String x:Key="UcReagentTable_lblInfoR1R2">R1R2R4试剂信息</sys:String>
+    <sys:String x:Key="UcReagentTable_lblInfoR3">R3试剂信息</sys:String>
+    <sys:String x:Key="UcReagentTable_btnEdit">编辑</sys:String>
+    <sys:String x:Key="UcReagentTable_btnLiquidUpdate">余量更新</sys:String>
+    <sys:String x:Key="UcReagentTable_btnReagentChange">更换试剂</sys:String>
+    <sys:String x:Key="UcReagentTable_lblSample1">无</sys:String>
+    <sys:String x:Key="UcReagentTable_lblSample2">正常</sys:String>
+    <sys:String x:Key="UcReagentTable_lblSample3">报警</sys:String>
+    <sys:String x:Key="UcReagentTable_lblSample4">空/失效</sys:String>
+    <sys:String x:Key="UcReagentTable_btnSelectAll">全选</sys:String>
+    <sys:String x:Key="UcReagentTable_btnCancelAll">取消选择</sys:String>
+    <sys:String x:Key="UcReagentTable_btnDelete">删除</sys:String>
+    <sys:String x:Key="UcReagentTable_gridReagent_Col2">编号</sys:String>
+    <sys:String x:Key="UcReagentTable_gridReagent_Col3">试剂名称</sys:String>
+    <sys:String x:Key="UcReagentTable_gridReagent_Col4">余量[mL]</sys:String>
+    <sys:String x:Key="UcReagentTable_gridReagent_Col5">有效期</sys:String>
+    <sys:String x:Key="UcReagentTable_gridReagent_Col6">批号</sys:String>
+    <sys:String x:Key="UcReagentTable_gridReagent_Remain">可测数</sys:String>
+    
+    <sys:String x:Key="UcReagentStore_lblInfo">试剂瓶信息</sys:String>
+    <sys:String x:Key="UcReagentStore_lblS1">S1</sys:String>
+    <sys:String x:Key="UcReagentStore_lblS2">S2</sys:String>
+    <sys:String x:Key="UcReagentStore_lblDilu1">稀释液1</sys:String>
+    <sys:String x:Key="UcReagentStore_lblDilu2">稀释液2</sys:String>
+    <sys:String x:Key="UcReagentStore_lblDilu3">稀释液3</sys:String>
+    <sys:String x:Key="UcReagentStore_lblS1Name">名称:</sys:String>
+    <sys:String x:Key="UcReagentStore_lblVol">余量(mL):</sys:String>
+    <sys:String x:Key="UcReagentStore_lblS1Expire">有效期:</sys:String>
+    <sys:String x:Key="UcReagentStore_lblVolByTimes">可测数:</sys:String>
+    <sys:String x:Key="UcReagentStore_lblSample1">无</sys:String>
+    <sys:String x:Key="UcReagentStore_lblSample2">正常</sys:String>
+    <sys:String x:Key="UcReagentStore_lblSample3">报警</sys:String>
+    <sys:String x:Key="UcReagentStore_lblSample4">空/失效</sys:String>
+    <sys:String x:Key="UcReagentStore_btnS1">更换S1</sys:String>
+    <sys:String x:Key="UcReagentStore_btnS2">更换S2</sys:String>
+    <sys:String x:Key="UcReagentStore_btnDilu">更换稀释液</sys:String>
+    <sys:String x:Key="UcReagentStore_btnEdit">编辑</sys:String>
+    <sys:String x:Key="UcReagentStore_lblCupInfo">剩余反应杯</sys:String>
+
+    <sys:String x:Key="UcItemEdit_lblAllItem">所有项目</sys:String>
+    <sys:String x:Key="UcItemEdit_lblUsingItem">可用项目</sys:String>
+    <sys:String x:Key="UcItemEdit_lblInfo">试剂参数</sys:String>
+    <sys:String x:Key="UcItemEdit_gridAllItem_Col1">项目编号</sys:String>
+    <sys:String x:Key="UcItemEdit_gridAllItem_Col2">名称</sys:String>
+    <sys:String x:Key="UcItemEdit_gridItemInfo_Col1">参数名</sys:String>
+    <sys:String x:Key="UcItemEdit_gridItemInfo_Col2">参数值</sys:String>
+
+    <sys:String x:Key="WindowCustomSetting_Title">自定义设置对话框</sys:String>
+    
+    <sys:String x:Key="WindowProgress">进程</sys:String>
+    <sys:String x:Key="WindowProgress_btnEMStop">停止</sys:String>
+
+    <sys:String x:Key="WindowStoreEdit">编辑</sys:String>
+    <sys:String x:Key="WindowStoreEdit_lblKind">类型:</sys:String>
+    <sys:String x:Key="WindowStoreEdit_lblName">名称:</sys:String>
+    <sys:String x:Key="WindowStoreEdit_lblVol">余量:</sys:String>
+    <sys:String x:Key="WindowStoreEdit_lblDeadline">有效期:</sys:String>
+    <sys:String x:Key="WindowStoreEdit_lblBarcode">条码:</sys:String>
+    <sys:String x:Key="WindowStoreEdit_lblCup">杯数:</sys:String>
+    <sys:String x:Key="WindowStoreEdit_btnSave">保存</sys:String>
+    <sys:String x:Key="WindowStoreEdit_btnClose">关闭</sys:String>
+    <sys:String x:Key="WindowStoreEdit_cobKindItem1">底物1_1</sys:String>
+    <sys:String x:Key="WindowStoreEdit_cobKindItem2">底物1_2</sys:String>
+    <sys:String x:Key="WindowStoreEdit_cobKindItem3">底物2_1</sys:String>
+    <sys:String x:Key="WindowStoreEdit_cobKindItem4">底物2_2</sys:String>
+    <sys:String x:Key="WindowStoreEdit_cobKindItem5">稀释液_1</sys:String>
+    <sys:String x:Key="WindowStoreEdit_cobKindItem6">稀释液_2</sys:String>
+    <sys:String x:Key="WindowStoreEdit_cobKindItem7">稀释液_3</sys:String>
+
+    <sys:String x:Key="WindowReagentEdit">试剂编辑</sys:String>
+    <sys:String x:Key="WindowReagentEdit_lblChannel">位置:</sys:String>
+    <sys:String x:Key="WindowReagentEdit_lblNewChannel">新位置:</sys:String>
+    <sys:String x:Key="WindowReagentEdit_lblReagentName">试剂名称:</sys:String>
+    <sys:String x:Key="WindowReagentEdit_lblLot">批号:</sys:String>
+    <sys:String x:Key="WindowReagentEdit_lblVol">剩余量:</sys:String>
+    <sys:String x:Key="WindowReagentEdit_lblBarcode">条码:</sys:String>
+    <sys:String x:Key="WindowReagentEdit_btnUpdate">更新</sys:String>
+    <sys:String x:Key="WindowReagentEdit_btnDelete">删除</sys:String>
+    <sys:String x:Key="WindowReagentEdit_btnClose">关闭</sys:String>
+
+    <sys:String x:Key="WindowBottleConfirm">试剂确认</sys:String>
+    <sys:String x:Key="WindowBottleConfirm_gridReagent_Col2">序号</sys:String>
+    <sys:String x:Key="WindowBottleConfirm_gridReagent_Col3">旧条码</sys:String>
+    <sys:String x:Key="WindowBottleConfirm_gridReagent_Col4">读取条码</sys:String>
+    <sys:String x:Key="WindowBottleConfirm_gridReagent_Col5">有效期</sys:String>
+    <sys:String x:Key="WindowBottleConfirm_gridReagent_Col6">项目编号</sys:String>
+    <sys:String x:Key="WindowBottleConfirm_gridReagent_Col7">项目名称</sys:String>
+    <sys:String x:Key="WindowBottleConfirm_gridReagent_Col8">试剂类型</sys:String>
+    <sys:String x:Key="WindowBottleConfirm_gridReagent_Col9">批号</sys:String>
+    <sys:String x:Key="WindowBottleConfirm_btnUpdate">更新试剂</sys:String>
+    <sys:String x:Key="WindowBottleConfirm_btnCancel">取消</sys:String>
+
+    <sys:String x:Key="WindowPreEdit">初始参数编辑</sys:String>
+    <sys:String x:Key="WindowPreEdit_lblFlushTimes">冲洗次数</sys:String>
+    <sys:String x:Key="WindowPreEdit_lblBFTimes">BF清洗次数</sys:String>
+    <sys:String x:Key="WindowPreEdit_lblS1AFlushTimes">S1__A 清洗次数</sys:String>
+    <sys:String x:Key="WindowPreEdit_lblS1AVol">S1__A 吐液量(μL)</sys:String>
+    <sys:String x:Key="WindowPreEdit_lblS1BFlushTimes">S1__B 清洗次数</sys:String>
+    <sys:String x:Key="WindowPreEdit_lblS1BVol">S1__B 吐液量(μL)</sys:String>
+    <sys:String x:Key="WindowPreEdit_lblS2AFlushTimes">S2__A 清洗次数</sys:String>
+    <sys:String x:Key="WindowPreEdit_lblS2AVol">S2__A 吐液量(μL)</sys:String>
+    <sys:String x:Key="WindowPreEdit_lblS2BFlushTimes">S2__B 清洗次数</sys:String>
+    <sys:String x:Key="WindowPreEdit_lblS2BVol">S2__B 吐液量(μL)</sys:String>
+    <sys:String x:Key="WindowPreEdit_lblRDT1CheckChannels">R1__T检查通道</sys:String>
+    <sys:String x:Key="WindowPreEdit_lblRDT2CheckChannels">R2__T检查通道</sys:String>
+    <sys:String x:Key="WindowPreEdit_btnSave">保存</sys:String>
+    <sys:String x:Key="WindowPreEdit_btnCancel">取消</sys:String>
+
+    <sys:String x:Key="VersionWindow_title">关于AE-240</sys:String>
+    <sys:String x:Key="VersionWindow_lblVersion">版本信息</sys:String>
+    <sys:String x:Key="VersionWindow_lblPC">PC UI</sys:String>
+    <sys:String x:Key="VersionWindow_lblTester">测试管理</sys:String>
+    <sys:String x:Key="VersionWindow_lblSub">设备App</sys:String>
+    <sys:String x:Key="VersionWindow_lblKernel">设备核心</sys:String>
+    <sys:String x:Key="VersionWindow_lblCal">计算器</sys:String>
+    <sys:String x:Key="VersionWindow_btnClose">关闭</sys:String>
+
+    <sys:String x:Key="R45NameBarcodeInput_btnOK">确认</sys:String>
+    <sys:String x:Key="R45NameBarcodeInput_btnCancel">取消</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="PageTestRequest_tabPatientRequest">病人</sys:String>
+    <sys:String x:Key="PageTestRequest_tabPriority">急诊</sys:String>
+    <sys:String x:Key="PageTestRequest_tabQCRequest">质量控制</sys:String>
+    <sys:String x:Key="PageTestRequest_tabCalibration">定标</sys:String>
+    <sys:String x:Key="PageTestRequest_tabGroupSetting">项目管理</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="WindowComment_btnSave">保存</sys:String>
+    <sys:String x:Key="WindowComment_btnCancel">取消</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="UcPatient_lblRackBarcode">样本架条码</sys:String>
+    <sys:String x:Key="UcPatient_btnDeleteRack">删除样本架</sys:String>
+    <sys:String x:Key="UcPatient_btnDeleteSample">删除样本</sys:String>
+    <sys:String x:Key="UcPatient_btnPatientInfo">样本信息</sys:String>
+    <sys:String x:Key="UcPatient_btnDeleteTest">删除</sys:String>
+    <sys:String x:Key="UcPatient_btnSaveToItemSet">保存设置</sys:String>
+    <sys:String x:Key="UcPatient_chkSampleDeluteRate">稀释</sys:String>
+    <sys:String x:Key="UcPatient_dgSample_Col1">位置</sys:String>
+    <sys:String x:Key="UcPatient_dgSample_Col2">样本编号</sys:String>
+    <sys:String x:Key="UcPatient_dgSample_Col3">病人编号</sys:String>
+    <sys:String x:Key="UcPatient_dgSample_Col4">预稀释倍数</sys:String>
+    <sys:String x:Key="UcPatient_dgSample_Col5">注释</sys:String>
+    <sys:String x:Key="UcPatient_dgTestRequest_Col1">项目编号</sys:String>
+    <sys:String x:Key="UcPatient_dgTestRequest_Col2">项目名称</sys:String>
+    <sys:String x:Key="UcPatient_dgTestRequest_Col3">稀释</sys:String>
+    <sys:String x:Key="UcPatient_tabItems_Tab1">项目</sys:String>
+    <sys:String x:Key="UcPatient_tabItems_Tab2">项目设置</sys:String>
+    <sys:String x:Key="UcPatient_lblMultiple">测试次数</sys:String>
+
+    <sys:String x:Key="UcPatient_dgTestRequest_Toolit" >点击选择全部</sys:String>
+
+    <sys:String x:Key="UcPatient_btnApply">申请</sys:String>
+    <sys:String x:Key="UcPatient_btnModify">修改</sys:String>
+    <sys:String x:Key="UcPatient_btnOption">测试选项</sys:String>
+    <sys:String x:Key="UcPatient_btnDelete">删除选中样本</sys:String>
+    <sys:String x:Key="UcPatient_btnDeleteAll">删除全部样本</sys:String>
+    <sys:String x:Key="UcPatient_btnDeleteAllHis">删除过期样本</sys:String>
+    <sys:String x:Key="UcPatient_msgConfirmDelete">是否删除?</sys:String>
+    <sys:String x:Key="UcPatient_msgNoSelectedItem">没有选择项目!</sys:String>
+    <sys:String x:Key="UcPatient_msgRackLoading">样本架正在装载!</sys:String>
+    <sys:String x:Key="UcPatient_msgRackBarcodeWrong">样本架条码格式错误!</sys:String>
+    <sys:String x:Key="UcPatient_msgRackPosWrong">样本架位置错误,范围:1-5</sys:String>
+    <sys:String x:Key="UcPatient_dgTestOption_title">测试选项</sys:String>
+    <sys:String x:Key="UcPatient_dgTestOption_TestCount">测试次数</sys:String>
+    <sys:String x:Key="UcPatient_dgSampleTypeNew">新样本</sys:String>
+    <sys:String x:Key="UcPatient_dgSampleTypeSelected">选中样本</sys:String>
+    <!--  -->
+    <sys:String x:Key="WindowPatient_Title">病人信息</sys:String>
+    <sys:String x:Key="WindowPatient_lblName">姓名:</sys:String>
+    <sys:String x:Key="WindowPatient_lblSex">性别:</sys:String>
+    <sys:String x:Key="WindowPatient_lblBirthday">生日:</sys:String>
+    <sys:String x:Key="WindowPatient_lblDepartment">科室:</sys:String>
+    <sys:String x:Key="WindowPatient_lblRoom">病房:</sys:String>
+    <sys:String x:Key="WindowPatient_lblBedNo">床号:</sys:String>
+    <sys:String x:Key="WindowPatient_lblDoctor">医生:</sys:String>
+    <sys:String x:Key="WindowPatient_lblSampleDate">样本日期:</sys:String>
+    <sys:String x:Key="WindowPatient_lblCollector">采血者:</sys:String>
+    <sys:String x:Key="WindowPatient_rbtnMale">男</sys:String>
+    <sys:String x:Key="WindowPatient_rbtnFemale">女</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="WindowAddToItemSet_Title">加入项目设置</sys:String>
+    <sys:String x:Key="WindowAddToItemSet_lblName">名称</sys:String>
+    <sys:String x:Key="WindowAddToItemSet_btnAdd">添加</sys:String>
+    <sys:String x:Key="WindowAddToItemSet_btnCancel">取消</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="WindowControlManage_Title">控制管理</sys:String>
+    <sys:String x:Key="WindowControlManage_lblTip">控制管理</sys:String>
+    <sys:String x:Key="WindowControlManage_lblLotNo">批号:</sys:String>
+    <sys:String x:Key="WindowControlManage_lblType">类型:</sys:String>
+    <sys:String x:Key="WindowControlManage_lblName">名称:</sys:String>
+    <sys:String x:Key="WindowControlManage_lblExpiration">有效期:</sys:String>
+    <sys:String x:Key="WindowControlManage_lblRegisterDate">注册日期:</sys:String>
+    <sys:String x:Key="WindowControlManage_lblBarcode">条码:</sys:String>
+    <sys:String x:Key="WindowControlManage_btnAddControl">添加</sys:String>
+    <sys:String x:Key="WindowControlManage_btnUpdate">更新</sys:String>
+    <sys:String x:Key="WindowControlManage_btnDeleteBarcode">删除</sys:String>
+    <sys:String x:Key="WindowControlManage_btnDeleteControl">删除</sys:String>
+    <sys:String x:Key="WindowControlManage_btnAddBarcode">添加</sys:String>
+    <sys:String x:Key="WindowControlManage_btnAddToQC">添加 -&gt;&gt;</sys:String>
+    <sys:String x:Key="WindowControlManage_btnDeleteFromQC">&lt;&lt;- 删除</sys:String>
+    <sys:String x:Key="WindowControlManage_btnClose">关闭</sys:String>
+    <sys:String x:Key="WindowControlManage_dgQClist_Col1">名称</sys:String>
+    <sys:String x:Key="WindowControlManage_dgLeft_Col1">项目编号</sys:String>
+    <sys:String x:Key="WindowControlManage_dgLeft_Col2">项目名称</sys:String>
+    <sys:String x:Key="WindowControlManage_dgRight_Col1">项目编号</sys:String>
+    <sys:String x:Key="WindowControlManage_dgRight_Col2">项目名称</sys:String>
+    <sys:String x:Key="WindowControlManage_dgBarcode_Col1">条码</sys:String>
+    <sys:String x:Key="WindowControlManage_dgBarcode_Col2">类型</sys:String>
+    <sys:String x:Key="WindowControlManage_dgBarcode_Col3">批号</sys:String>
+    <sys:String x:Key="WindowControlManage_dgBarcode_Col4">有效期</sys:String>
+    <sys:String x:Key="WindowControlManage_dgBarcode_Col5">注册日期</sys:String>
+    <sys:String x:Key="WindowControlManage_chkShowHide">显示隐藏</sys:String>
+    <sys:String x:Key="WindowControlManage_btnHide_Hide">隐藏</sys:String>
+    <sys:String x:Key="WindowControlManage_btnHide_Show">显示</sys:String>
+    
+    <sys:String x:Key="UcQC_dgSample_Col1">位置</sys:String>
+    <sys:String x:Key="UcQC_dgSample_Col2">QC条码</sys:String>
+    <sys:String x:Key="UcQC_dgSample_Col3">类型</sys:String>
+    <sys:String x:Key="UcQC_dgSample_Col4">试剂批号</sys:String>
+    <sys:String x:Key="UcQC_dgSample_Col5">注释</sys:String>
+    <sys:String x:Key="UcQC_btnControlManage">质控管理</sys:String>
+
+    <!--TestRequest模块之 紧急检体模块-->
+    <sys:String x:Key="UcPatient_btnSavePriority">保存</sys:String>
+    <sys:String x:Key="UcPatient_btnControlManager">Control Manager</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="UcItemSetManage_lblTip">项目设置</sys:String>
+    <sys:String x:Key="UcItemSetManage_dgItemSetlist_Col1">索引</sys:String>
+    <sys:String x:Key="UcItemSetManage_dgItemSetlist_Col2">设置名称</sys:String>
+    <sys:String x:Key="UcItemSetManage_lblSetName">名称:</sys:String>
+    <sys:String x:Key="UcItemSetManage_chkUseable">可用</sys:String>
+    <sys:String x:Key="UcItemSetManage_btnAdd">添加</sys:String>
+    <sys:String x:Key="UcItemSetManage_btnUpdate">更新</sys:String>
+    <sys:String x:Key="UcItemSetManage_btnDelete">删除</sys:String>
+    <sys:String x:Key="UcItemSetManage_dgLeft_Col1">项目编码</sys:String>
+    <sys:String x:Key="UcItemSetManage_dgLeft_Col2">项目名称</sys:String>
+    <sys:String x:Key="UcItemSetManage_dgRight_Col1">项目编号</sys:String>
+    <sys:String x:Key="UcItemSetManage_dgRight_Col2">项目名称</sys:String>
+    <sys:String x:Key="UcItemSetManage_btnAddToSet">添加 -&gt;&gt;</sys:String>
+    <sys:String x:Key="UcItemSetManage_btnDeleteFromSet">删除</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="UcCalibrate_lblTip">测试项目</sys:String>
+    <sys:String x:Key="UcCalibrate_lblRackBarcode1">样本架1条码</sys:String>
+    <sys:String x:Key="UcCalibrate_lblRackBarcode2">样本架2条码</sys:String>
+    <sys:String x:Key="UcCalibrate_dgSample_Col1">位置</sys:String>
+    <sys:String x:Key="UcCalibrate_dgSample_Col2">项目名称</sys:String>
+    <sys:String x:Key="UcCalibrate_dgSample_Col3">批号</sys:String>
+    <sys:String x:Key="UcCalibrate_dgSample_Col4">名称</sys:String>
+    <sys:String x:Key="UcCalibrate_dgSample_Col5">测试次数</sys:String>
+    <sys:String x:Key="UcCalibrate_dgSample_Col6">注释</sys:String>
+    <sys:String x:Key="UcCalibrate_lblRackBarcode">项目设置</sys:String>
+    <sys:String x:Key="UcCalibrate_dgStandands_Col1">项目设置</sys:String>
+    <sys:String x:Key="UcCalibrate_dgStandands_Col2">批号</sys:String>
+    <sys:String x:Key="UcCalibrate_dgStandands_Col3">有效期</sys:String>
+    <sys:String x:Key="UcCalibrate_dgStandands_Col4">定标质控</sys:String>
+    <sys:String x:Key="UcCalibrate_btnSave">保存</sys:String>
+    <sys:String x:Key="UcCalibrate_btnChoose">作为标准</sys:String>
+    <sys:String x:Key="UcCalibrate_btnDelete">删除</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="PageTester_tabMonitor">测试监控</sys:String>
+    <sys:String x:Key="PageTester_tabResultData">结果</sys:String>
+
+    <sys:String x:Key="UcMonitor_rbSample">样本</sys:String>
+    <sys:String x:Key="UcMonitor_rbcalibration">定标</sys:String>
+    <sys:String x:Key="UcMonitor_tbItems">测试项目</sys:String>
+    <sys:String x:Key="UcMonitor_tbPrifix">前缀</sys:String>
+    <sys:String x:Key="UcMonitor_btnStart">开始</sys:String>
+
+    <sys:String x:Key="UcMonitor_btnAll">所有</sys:String>
+    <sys:String x:Key="UcMonitor_btnUntested">未测试</sys:String>
+    <sys:String x:Key="UcMonitor_btnAbnormal">异常结果</sys:String>
+    <sys:String x:Key="UcMonitor_btnRedo">重做</sys:String>
+    <sys:String x:Key="UcMonitor_btnR12">切换至R1R2R4</sys:String>
+    <sys:String x:Key="UcMonitor_btnR3">切换至R3</sys:String>
+
+    <sys:String x:Key="UcMonitor_gridMonitor_Col1">测试ID</sys:String>
+    <sys:String x:Key="UcMonitor_gridMonitor_Col2">样本架条码</sys:String>
+    <sys:String x:Key="UcMonitor_gridMonitor_Col3">样本编号</sys:String>
+    <sys:String x:Key="UcMonitor_gridMonitor_Col4">项目名称</sys:String>
+    <sys:String x:Key="UcMonitor_gridMonitor_Col5">位置</sys:String>
+    <sys:String x:Key="UcMonitor_gridMonitor_Col6">周期</sys:String>
+    <sys:String x:Key="UcMonitor_gridMonitor_Col7">状态</sys:String>
+    <sys:String x:Key="UcMonitor_gridMonitor_Col8">Dark</sys:String>
+    <sys:String x:Key="UcMonitor_gridMonitor_Col9">RLU</sys:String>
+    <sys:String x:Key="UcMonitor_lblInfo">进度</sys:String>
+
+    <sys:String x:Key="UcMonitor_gridAbnormal_Col1">测试ID</sys:String>
+    <sys:String x:Key="UcMonitor_gridAbnormal_Col2">样本架条码</sys:String>
+    <sys:String x:Key="UcMonitor_gridAbnormal_Col3">样本编号</sys:String>
+    <sys:String x:Key="UcMonitor_gridAbnormal_Col4">项目名称</sys:String>
+    <sys:String x:Key="UcMonitor_gridAbnormal_Col5">错误时间</sys:String>
+    <sys:String x:Key="UcMonitor_gridAbnormal_Col6">位置</sys:String>
+    <sys:String x:Key="UcMonitor_gridAbnormal_Col7">原因</sys:String>
+
+    <sys:String x:Key="UcMonitor_gridUntested_Col1">测试ID</sys:String>
+    <sys:String x:Key="UcMonitor_gridUntested_Col2">样本架条码</sys:String>
+    <sys:String x:Key="UcMonitor_gridUntested_Col3">样本编号</sys:String>
+    <sys:String x:Key="UcMonitor_gridUntested_Col4">项目名称</sys:String>
+    <sys:String x:Key="UcMonitor_gridUntested_Col5">位置</sys:String>
+    <sys:String x:Key="UcMonitor_gridUntested_Col6">原因</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="WindowInitializeMonitor_Title">配置</sys:String>
+    <sys:String x:Key="WindowInitializeMonitor_btnClose">关闭</sys:String>
+    <sys:String x:Key="WindowInitializeMonitor_btnStop">EM停止</sys:String>
+
+    <sys:String x:Key="WindowMaterialConfirm_Title">确认</sys:String>
+
+    <sys:String x:Key="WindowMaterialConfirm_ItemName">项目名称</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_ItemNo">项目编号</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_TestCount">数量</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_btnContinue">继续</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_btnCancel">取消</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_R1Left">R1 可测数 [Sum]</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_R2Left">R2 可测数 [Sum]</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_R3Left">R3 可测数 [Sum]</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_R4Left">R4 可测数 [Sum]</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_S1Left">S1 余量(mL)</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_S2Left">S2 余量(mL)</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_DiluentLeft">稀释液余量(mL)</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_CuvetteLeft">反应杯余量</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_LotNo">批号</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_CalibrationFlag">定标</sys:String>
+    <sys:String x:Key="WindowMaterialConfirm_lblCheckResult">确认结果</sys:String>
+
+
+    <!--  -->
+    <sys:String x:Key="UcResultData_select">选择</sys:String>
+    <sys:String x:Key="UcResultData_grpResult">测试结果</sys:String>
+    <sys:String x:Key="UcResultData_btnFileOutput">导出</sys:String>
+    <sys:String x:Key="UcResultData_btnSummaryPrint">汇总打印</sys:String>
+    <sys:String x:Key="UcResultData_btnSinglePrint">打印报告单</sys:String>
+    <sys:String x:Key="UcResultData_btnCustom">自定义设置</sys:String>
+    <sys:String x:Key="UcResultData_btnSampledetail">样本详情</sys:String>
+    <sys:String x:Key="UcResultData_btnDatabase">数据库</sys:String>
+    <sys:String x:Key="UcResultData_btnRecalculate">重新计算</sys:String>
+    <sys:String x:Key="UcResultData_btnLast">历史</sys:String>
+    <sys:String x:Key="UcResultData_btnToday">当前</sys:String>
+    <sys:String x:Key="UcResultData_lblCount">总计</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col1">测试ID</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col2">姓名</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col3">样本编号</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col4">完成时间</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col14">开始时间</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col5">类型</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col6">项目名称</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col7">RLU</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col8">结果</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col9">单位</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col10">诊断</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col11">标记</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col12">是否打印</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col13">是否上传LIS</sys:String>
+    <sys:String x:Key="UcResultData_gridResult_Col15">提示</sys:String>
+
+    <sys:String x:Key="UcDisplaySetting_ItemOrderSetting">项目显示顺序</sys:String>
+    <sys:String x:Key="UcDisplaySetting_columnShow">显示列选择</sys:String>
+    <sys:String x:Key="UcDisplaySetting_tabDisplaySettingTitle">显示设置</sys:String>
+    <sys:String x:Key="UcDisplaySetting_tabPrintSettingTitle">打印设置</sys:String>
+    
+    <sys:String x:Key="UcDisplaySetting_btnSave">保存</sys:String>
+    <sys:String x:Key="UcDisplaySetting_btnClose">关闭</sys:String>
+    
+    <sys:String x:Key="WindowDatabase_Title">数据库</sys:String>
+    <sys:String x:Key="WindowDatabase_Query">查询</sys:String>
+    <sys:String x:Key="WindowDatabase_Delete">删除</sys:String>
+    <sys:String x:Key="WindowDatabase_Recalculate">重新计算</sys:String>
+    <sys:String x:Key="WindowDatabase_Export">导出</sys:String>
+    <sys:String x:Key="WindowDatabase_SendtoLIS">LIS传输</sys:String>
+    <sys:String x:Key="WindowDatabase_DisplaySettings">显示设置</sys:String>
+    <sys:String x:Key="WindowDatabase_Close">关闭</sys:String>
+    <sys:String x:Key="WindowDatabase_FirstPage"><![CDATA[|<]]></sys:String>
+    <sys:String x:Key="WindowDatabase_PrevPage"><![CDATA[<]]></sys:String>
+    <sys:String x:Key="WindowDatabase_NextPage"><![CDATA[>]]></sys:String>
+    <sys:String x:Key="WindowDatabase_LastPage"><![CDATA[>|]]></sys:String>
+    <sys:String x:Key="WindowRecalculate_lblRLU">RLU:</sys:String>
+    <sys:String x:Key="WindowRecalculate_lblResult">结果:</sys:String>
+    <sys:String x:Key="WindowRecalculate_btnRecalculate">重新计算</sys:String>
+    <sys:String x:Key="WindowRecalculate_btnSave">保存</sys:String>
+    <sys:String x:Key="WindowRecalculate_btnCancel">取消</sys:String>
+
+    <sys:String x:Key="_WindowPatient">病人信息</sys:String>
+    <sys:String x:Key="_WindowPatient_lblName">姓名:</sys:String>
+    <sys:String x:Key="_WindowPatient_lblSex">性别:</sys:String>
+    <sys:String x:Key="_WindowPatient_lblBirth">生日:</sys:String>
+    <sys:String x:Key="_WindowPatient_lblDepart">科室:</sys:String>
+    <sys:String x:Key="_WindowPatient_lblRoomNO">病房:</sys:String>
+    <sys:String x:Key="_WindowPatient_lblBed">床号:</sys:String>
+    <sys:String x:Key="_WindowPatient_lblDoctor">医生:</sys:String>
+    <sys:String x:Key="_WindowPatient_lblSampleDate">样本日期:</sys:String>
+    <sys:String x:Key="_WindowPatient_lblSampler">采血者:</sys:String>
+    <sys:String x:Key="_WindowPatient_btnClose">关闭</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="PageDataProcess_tabPrecision">精度管理</sys:String>
+    <sys:String x:Key="PageDataProcess_tabWestGuard">Westgard</sys:String>
+    <sys:String x:Key="PageDataProcess_tabCalibration">定标数据</sys:String>
+
+    <sys:String x:Key="UcPrecision_gridDataByDate_Col1">日期</sys:String>
+    <sys:String x:Key="UcPrecision_gridDataByDate_Col2">计数</sys:String>
+    <sys:String x:Key="UcPrecision_gridDataByDate_Col3">均值</sys:String>
+    <sys:String x:Key="UcPrecision_gridDataByDate_Col4">SD</sys:String>
+    <sys:String x:Key="UcPrecision_gridDataByDate_Col5">CV(%)</sys:String>
+    <sys:String x:Key="UcPrecision_gridDataByDate_Col6">范围</sys:String>
+    <sys:String x:Key="UcPrecision_lblKind">控制类型</sys:String>
+    <sys:String x:Key="UcPrecision_lblDate">日期</sys:String>
+    <sys:String x:Key="UcPrecision_lblTitle">按日期统计</sys:String>
+    <sys:String x:Key="UcPrecision_lblTotal">计数</sys:String>
+    <sys:String x:Key="UcPrecision_lblMean">X</sys:String>
+    <sys:String x:Key="UcPrecision_lblSD">SD</sys:String>
+    <sys:String x:Key="UcPrecision_lblCV">CV(%)</sys:String>
+    <sys:String x:Key="UcPrecision_lblR">R</sys:String>
+
+    <sys:String x:Key="UcWestGuard_lblSDGraphic">SD 图形</sys:String>
+    <sys:String x:Key="UcWestGuard_lblDateGroup">按日期统计</sys:String>
+    <sys:String x:Key="UcWestGuard_lblToday">今日统计</sys:String>
+    <sys:String x:Key="UcWestGuard_lblPeriod">周期</sys:String>
+    <sys:String x:Key="UcWestGuard_lblFrom">从</sys:String>
+    <sys:String x:Key="UcWestGuard_lblTo">到</sys:String>
+    <sys:String x:Key="UcWestGuard_lblItemInfo">项目参数</sys:String>
+    <sys:String x:Key="UcWestGuard_lblWGCheck">WG检测</sys:String>
+    <sys:String x:Key="UcWestGuard_lblUserCL">UserSD CL</sys:String>
+    <sys:String x:Key="UcWestGuard_lblUserCH">UserSD CH</sys:String>
+    <sys:String x:Key="UcWestGuard_lblCount">计数</sys:String>
+    <sys:String x:Key="UcWestGuard_lblMean">说明</sys:String>
+    <sys:String x:Key="UcWestGuard_lblSD">SD</sys:String>
+    <sys:String x:Key="UcWestGuard_lblCV">CV(%)</sys:String>
+    <sys:String x:Key="UcWestGuard_lblWestGuard">WG 检测</sys:String>
+
+
+    <sys:String x:Key="UcCalibration_btnActive">激活</sys:String>
+    <sys:String x:Key="UcCalibration_btnSave">保存</sys:String>
+    <sys:String x:Key="UcCalibration_btnReCalc">重新计算</sys:String>
+    <sys:String x:Key="UcCalibration_lblInfo">定标信息</sys:String>
+    <sys:String x:Key="UcCalibration_lblDate">创建日期</sys:String>
+    <sys:String x:Key="UcCalibration_lblPoint">点</sys:String>
+    <sys:String x:Key="UcCalibration_lblMulti">多样性</sys:String>
+    <sys:String x:Key="UcCalibration_lblRegression">还原</sys:String>
+    <sys:String x:Key="UcCalibration_lblScale">比例尺</sys:String>
+    <sys:String x:Key="UcCalibration_lblCalibData">定标日期</sys:String>
+    <sys:String x:Key="UcCalibration_gridCalibData_col1">RLU1</sys:String>
+    <sys:String x:Key="UcCalibration_gridCalibData_col2">RLU2</sys:String>
+    <sys:String x:Key="UcCalibration_gridCalibData_col3">RLU3</sys:String>
+    <sys:String x:Key="UcCalibration_gridCalibData_col4">Standard</sys:String>
+    <sys:String x:Key="UcCalibration_gridCalibData_col5">浓度</sys:String>
+
+
+
+    <sys:String x:Key="WindowCalibActive">使用定标</sys:String>
+    <sys:String x:Key="WindowCalibActive_gridData_Col1">ID</sys:String>
+    <sys:String x:Key="WindowCalibActive_gridData_Col2">项目名称</sys:String>
+    <sys:String x:Key="WindowCalibActive_gridData_Col3">批号</sys:String>
+    <sys:String x:Key="WindowCalibActive_gridData_Col4">创建日期</sys:String>
+    <sys:String x:Key="WindowCalibActive_gridData_Col5">截止日期</sys:String>
+    <sys:String x:Key="WindowCalibActive_gridData_Col6">激活</sys:String>
+    <sys:String x:Key="WindowCalibActive_btnOK">激活</sys:String>
+    <sys:String x:Key="WindowCalibActive_btnCancel">取消</sys:String>
+
+
+    <!--  -->
+    <sys:String x:Key="PageParameter_tabBasic">基本设置</sys:String>
+    <sys:String x:Key="PageParameter_tabSampleInfusion">样本量</sys:String>
+    <sys:String x:Key="PageParameter_tabReagent">试剂量</sys:String>
+    <sys:String x:Key="PageParameter_tabCalibration">定标</sys:String>
+    <sys:String x:Key="PageParameter_tabDataJudge">数据判断</sys:String>
+    <sys:String x:Key="PageParameter_tabQC">质量控制</sys:String>
+    <sys:String x:Key="PageParameter_btnAdd">添加</sys:String>
+    <sys:String x:Key="PageParameter_btnDelete">删除</sys:String>
+    <sys:String x:Key="PageParameter_gridItems_Col1">项目编号</sys:String>
+    <sys:String x:Key="PageParameter_gridItems_Col2">项目名称</sys:String>
+    <sys:String x:Key="PageParameter_gridBasicSetting_Col1">参数名称</sys:String>
+    <sys:String x:Key="PageParameter_gridBasicSetting_Col2">最少数</sys:String>
+    <sys:String x:Key="PageParameter_gridBasicSetting_Col3">最多数</sys:String>
+    <sys:String x:Key="PageParameter_gridBasicSetting_Col4">默认</sys:String>
+    <sys:String x:Key="PageParameter_gridBasicSetting_Col5">设置</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_HeadName">参考范围</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_LableAgeUnit">年龄类型</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_CmbYear">年</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_CmbMonth">月</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_CmbDay">天</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_LableAgeFrom">年龄起点</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_LableAgeTo">年龄终点</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_LableRefFrom">范围起点</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_LableRefTo">范围终点</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_LableCriRefFrom">危机值起点</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_LableCriRefTo">危机值终点</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_LableSexType">性别</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_CmbNull">空</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_CmbMale">男</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_CmbFemale">女</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_LableIsDefault">是否默认</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_LableEnableCri">启用危机值</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_ButtonNewRef">新建</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_ButtonModifyRef">修改</sys:String>
+    <sys:String x:Key="PageParameter_tabItemRefParam_ButtonDeleteRef">删除</sys:String>
+
+    <sys:String x:Key="WindowAddItem">添加新项目</sys:String>
+    <sys:String x:Key="WindowAddItem_grpInfo">新测试项目</sys:String>
+    <sys:String x:Key="WindowAddItem_lblItemNo">项目编号:</sys:String>
+    <sys:String x:Key="WindowAddItem_lblItemName">项目名称:</sys:String>
+    <sys:String x:Key="WindowAddItem_lblRemark">范围:1-9999</sys:String>
+    <sys:String x:Key="WindowAddItem_btnSave">添加</sys:String>
+    <sys:String x:Key="WindowAddItem_btnCancel">取消</sys:String>
+
+    <sys:String x:Key="WindowUpdateItem_lblMax">最大数:</sys:String>
+    <sys:String x:Key="WindowUpdateItem_lblMin">最小数:</sys:String>
+    <sys:String x:Key="WindowUpdateItem_lblDefault">默认:</sys:String>
+    <sys:String x:Key="WindowUpdateItem_lblType">数据类型:</sys:String>
+    <sys:String x:Key="WindowUpdateItem_lblSetting">设置:</sys:String>
+    <sys:String x:Key="WindowUpdateItem_lblDescription">描述:</sys:String>
+    <sys:String x:Key="WindowUpdateItem_lblPoint1">小数点后位数:</sys:String>
+    <sys:String x:Key="WindowUpdateItem_lblPoint2">长度:</sys:String>
+    <sys:String x:Key="WindowUpdateItem_btnSave">保存</sys:String>
+    <sys:String x:Key="WindowUpdateItem_btnCancel">取消</sys:String>
+
+
+    <!--  -->
+    <sys:String x:Key="PageMaintenance_tabSetting">环境设置</sys:String>
+    <sys:String x:Key="PageMaintenance_tabLis">LIS设置</sys:String>
+    <sys:String x:Key="PageMaintenance_tabBarcodeRead">条码读取测试</sys:String>
+    <sys:String x:Key="PageMaintenance_tabDetectorTest">传感器设置</sys:String>
+    <sys:String x:Key="PageMaintenance_tabSequence">序列操作</sys:String>
+    <sys:String x:Key="PageMaintenance_tabUnitAdjust">单元调试</sys:String>
+    <sys:String x:Key="PageMaintenance_tabUtility">通用</sys:String>
+    <sys:String x:Key="PageMaintenance_tabBottle">瓶子设置</sys:String>
+    <sys:String x:Key="PageMaintenance_tabLog">Log查询</sys:String>
+    <sys:String x:Key="PageMaintenance_tabRackBarcode">样本架条码</sys:String>
+    <sys:String x:Key="PageMaintenance_tabActionGroup">组合</sys:String>
+    <sys:String x:Key="PageMaintenance_tabPressure">压力传感器</sys:String>
+
+
+    <sys:String x:Key="UcDeviceSetting_lblCaption">长按参数修改参数值</sys:String>
+    <sys:String x:Key="UcDeviceSetting_colParam">参数名称</sys:String>
+    <sys:String x:Key="UcDeviceSetting_colMaxValue">最大数量</sys:String>
+    <sys:String x:Key="UcDeviceSetting_colMinValue">最小数量</sys:String>
+    <sys:String x:Key="UcDeviceSetting_colDefault">默认</sys:String>
+    <sys:String x:Key="UcDeviceSetting_colSetValue">设置</sys:String>
+    <sys:String x:Key="UcDeviceSetting_radio1">基本设置</sys:String>
+    <sys:String x:Key="UcDeviceSetting_radio2">设备信息设置</sys:String>
+    <sys:String x:Key="UcDeviceSetting_radio3">操作设置</sys:String>
+    <sys:String x:Key="UcDeviceSetting_radio4">试剂瓶设置</sys:String>
+    <sys:String x:Key="UcDeviceSetting_radio5">设备串口号设置</sys:String>
+    <sys:String x:Key="UcDeviceSetting_radio6">警戒线设置</sys:String>
+    <sys:String x:Key="UcDeviceSetting_radio7">初始设置</sys:String>
+    <sys:String x:Key="UcDeviceSetting_radio8">休眠设置</sys:String>
+    <sys:String x:Key="UcDeviceSetting_radio9">LIS设置</sys:String>
+
+    <sys:String x:Key="UcLisSetting_lblSwitch">Lis切换:</sys:String>
+    <sys:String x:Key="UcLisSetting_lblSendMode">结果发送模式:</sys:String>
+    <sys:String x:Key="UcLisSetting_radioSendMode1">实时发送</sys:String>
+    <sys:String x:Key="UcLisSetting_radioSendMode2">批量发送</sys:String>
+    <sys:String x:Key="UcLisSetting_lblRequestMode">请求模式:</sys:String>
+    <sys:String x:Key="UcLisSetting_radioRequestMode1">样本条码</sys:String>
+    <sys:String x:Key="UcLisSetting_radioRequestMode2">样本架条码</sys:String>
+    <sys:String x:Key="UcLisSetting_lblSetAddress">Lis地址设置:</sys:String>
+    <sys:String x:Key="UcLisSetting_lblHost">Host IP:</sys:String>
+    <sys:String x:Key="UcLisSetting_lblPort">Port:</sys:String>
+    <sys:String x:Key="UcLisSetting_btnSave">保存</sys:String>
+
+    <sys:String x:Key="UcBarCodeReadTest_listType_Item1">样本条码</sys:String>
+    <sys:String x:Key="UcBarCodeReadTest_listType_Item2">R1条码</sys:String>
+    <sys:String x:Key="UcBarCodeReadTest_listType_Item3">R2条码</sys:String>
+    <sys:String x:Key="UcBarCodeReadTest_btnMove">移除</sys:String>
+    <sys:String x:Key="UcBarCodeReadTest_btnRead">读取</sys:String>
+    <sys:String x:Key="UcBarCodeReadTest_chkContinuous">继续</sys:String>
+
+    <sys:String x:Key="UcDetectorTest_lblCount">测量次数[10-20000]:</sys:String>
+    <sys:String x:Key="UcDetectorTest_lblTime">测量周期(ms)[10-20000]:</sys:String>
+    <sys:String x:Key="UcDetectorTest_lblInterval">测量间隔(ms)[10-20000]:</sys:String>
+    <sys:String x:Key="UcDetectorTest_btnStart">执行</sys:String>
+
+    <sys:String x:Key="UcSequence_item01">全部复位</sys:String>
+    <sys:String x:Key="UcSequence_item02">冲洗管路</sys:String>
+    <sys:String x:Key="UcSequence_item03">温育盘废弃反应杯测试</sys:String>
+    <sys:String x:Key="UcSequence_item04">反应杯搬运</sys:String>
+    <sys:String x:Key="UcSequence_item05">排液测试</sys:String>
+    <sys:String x:Key="UcSequence_item06">清洗分离测试</sys:String>
+    <sys:String x:Key="UcSequence_item07">液面探测测试</sys:String>
+    <sys:String x:Key="UcSequence_item08">演示测试</sys:String>
+    <sys:String x:Key="UcSequence_item09">条码读取测试</sys:String>
+    <sys:String x:Key="UcSequence_item10">测 RLU</sys:String>
+    <sys:String x:Key="UcSequence_item11">样本泵测试</sys:String>
+    <sys:String x:Key="UcSequence_item12">稀释泵测试</sys:String>
+    <sys:String x:Key="UcSequence_item13">试剂泵测试</sys:String>
+    <sys:String x:Key="UcSequence_item14">磁颗粒泵测试</sys:String>
+    <sys:String x:Key="UcSequence_item15">底物A泵测试</sys:String>
+    <sys:String x:Key="UcSequence_item16">底物B泵测试</sys:String>
+    <sys:String x:Key="UcSequence_item17">Drainage Test</sys:String>
+    <sys:String x:Key="UcSequence_btnStartSequence">执行</sys:String>
+    <sys:String x:Key="UcSequence_lblParam">参数</sys:String>
+
+    <sys:String x:Key="UcUtility_btnSubVerUp">升级设备</sys:String>
+    <sys:String x:Key="UcUtility_btnRebootSub">重启设备</sys:String>
+    <sys:String x:Key="UcUtility_btnBackUp">备份</sys:String>
+    <sys:String x:Key="UcUtility_btnRestore">还原</sys:String>
+    <sys:String x:Key="UcUtility_btnSimpleTest">简单测试</sys:String>
+
+    <sys:String x:Key="UcBottleSet_lblBottleKind">瓶子类型:</sys:String>
+    <sys:String x:Key="UcBottleSet_lblDescript">高度~液面 量:</sys:String>
+    <sys:String x:Key="UcBottleSet_gridInfo_Col1">脉冲</sys:String>
+    <sys:String x:Key="UcBottleSet_gridInfo_Col2">量(mL)</sys:String>
+    <sys:String x:Key="UcBottleSet_lblDelta">Delta:</sys:String>
+    <sys:String x:Key="UcBottleSet_lblVolumn">量(mL):</sys:String>
+    <sys:String x:Key="UcBottleSet_lblHeight">脉冲:</sys:String>
+    <sys:String x:Key="UcBottleSet_btnLiquidCheck">液面探测</sys:String>
+    <sys:String x:Key="UcBottleSet_radioRow">选择行</sys:String>
+    <sys:String x:Key="UcBottleSet_radioAll">所有</sys:String>
+    <sys:String x:Key="UcBottleSet_lblDeltaVol">Volume Delta:</sys:String>
+    <sys:String x:Key="UcBottleSet_lblVolumnHeight">Pulse Delta:</sys:String>
+    <sys:String x:Key="UcBottleSet_btnUpdate">更新</sys:String>
+    <sys:String x:Key="UcBottleSet_btnDelete">删除</sys:String>
+    <sys:String x:Key="UcBottleSet_btnClear">删除所有</sys:String>
+    <sys:String x:Key="UcBottleSet_ComboBox1">R1R2R4瓶</sys:String>
+    <sys:String x:Key="UcBottleSet_ComboBox2">R3瓶</sys:String>
+    <sys:String x:Key="UcBottleSet_ComboBox3">稀释瓶</sys:String>
+
+    <sys:String x:Key="UcLogSearch_lblFrom">从:</sys:String>
+    <sys:String x:Key="UcLogSearch_lblTo">到:</sys:String>
+    <sys:String x:Key="UcLogSearch_lblLevel">水平:</sys:String>
+    <sys:String x:Key="UcLogSearch_lblOperator">操作员:</sys:String>
+    <sys:String x:Key="UcLogSearch_gridLog_Col1">Log时间</sys:String>
+    <sys:String x:Key="UcLogSearch_gridLog_Col2">消息</sys:String>
+    <sys:String x:Key="UcLogSearch_gridLog_Col3">水平</sys:String>
+    <sys:String x:Key="UcLogSearch_gridLog_Col4">模块</sys:String>
+    <sys:String x:Key="UcLogSearch_gridLog_Col5">操作员</sys:String>
+    <sys:String x:Key="UcLogSearch_cobLevel_Item1">信息</sys:String>
+    <sys:String x:Key="UcLogSearch_cobLevel_Item2">警告</sys:String>
+    <sys:String x:Key="UcLogSearch_cobLevel_Item3">错误</sys:String>
+    <sys:String x:Key="UcLogSearch_btnSearch">查询</sys:String>
+
+    <sys:String x:Key="UcRackBarcodeSet_lblInfo">在使用的样本架</sys:String>
+    <sys:String x:Key="UcRackBarcodeSet_gridRack_Col1">样本架条码</sys:String>
+    <sys:String x:Key="UcRackBarcodeSet_btnAdd">新增</sys:String>
+    <sys:String x:Key="UcRackBarcodeSet_btnEdit">编辑</sys:String>
+    <sys:String x:Key="UcRackBarcodeSet_btnDelete">删除</sys:String>
+
+    <sys:String x:Key="UcActionGroup_lblCount">次数:</sys:String>
+    <sys:String x:Key="UcActionGroup_btnExec">执行</sys:String>
+
+    <sys:String x:Key="WindowMtcParameter_title">参数设置</sys:String>
+    <sys:String x:Key="WindowMtcParameter_lblMaxValue">最大数:</sys:String>
+    <sys:String x:Key="WindowMtcParameter_lblMinValue">最少数:</sys:String>
+    <sys:String x:Key="WindowMtcParameter_lblDefaultValue">默认:</sys:String>
+    <sys:String x:Key="WindowMtcParameter_lblDataTypeValue">数据类型:</sys:String>
+    <sys:String x:Key="WindowMtcParameter_lblSetValue">设置:</sys:String>
+    <sys:String x:Key="WindowMtcParameter_lblCaption">描述:</sys:String>
+    <sys:String x:Key="WindowMtcParameter_btnSaveParam">保存</sys:String>
+    <sys:String x:Key="WindowMtcParameter_btnCancel">取消</sys:String>
+
+    <sys:String x:Key="WindowPortEdit_tiltle">驱动设置</sys:String>
+    <sys:String x:Key="WindowPortEdit_colID">ID</sys:String>
+    <sys:String x:Key="WindowPortEdit_colDescription">描述</sys:String>
+    <sys:String x:Key="WindowPortEdit_colValue">值</sys:String>
+    <sys:String x:Key="WindowPortEdit_btnSave">保存</sys:String>
+    <sys:String x:Key="WindowPortEdit_btnCancel">取消</sys:String>
+    <sys:String x:Key="WindowPortEdit_lblrect1">更换</sys:String>
+    <sys:String x:Key="WindowPortEdit_lblrect2">无效</sys:String>
+
+    <sys:String x:Key="WindowRepeatMove_tiltle">驱动单元</sys:String>
+    <sys:String x:Key="WindowRepeatMove_lblFoward">前进:</sys:String>
+    <sys:String x:Key="WindowRepeatMove_lblBackWard">后退:</sys:String>
+    <sys:String x:Key="WindowRepeatMove_btnStart">开始</sys:String>
+    <sys:String x:Key="WindowRepeatMove_btnStop">停止</sys:String>
+    <sys:String x:Key="WindowRepeatMove_btnClose">退出</sys:String>
+    <sys:String x:Key="WindowRepeatMove_lblDelay">延期:</sys:String>
+    <sys:String x:Key="WindowRepeatMove_lblms">ms</sys:String>
+    <sys:String x:Key="WindowRepeatMove_lblPos1">Pos1:</sys:String>
+    <sys:String x:Key="WindowRepeatMove_lblPos2">Pos2:</sys:String>
+    <sys:String x:Key="WindowRepeatMove_chkCheckSafety">安全</sys:String>
+    <sys:String x:Key="WindowRepeatMove_chkLiquid">液面探测</sys:String>
+
+
+    <sys:String x:Key="WindowUpdater_lblTitle">请指定subcpu固件(* bin),并点击“更新”按钮</sys:String>
+    <sys:String x:Key="WindowUpdater_lblPath">程序路径</sys:String>
+    <sys:String x:Key="WindowUpdater_btnUpdate">SubCPU升级版本</sys:String>
+    <sys:String x:Key="WindowUpdater_lblSending">程序发送中</sys:String>
+    <sys:String x:Key="WindowUpdater_lblSectorErase">扇区擦除</sys:String>
+    <sys:String x:Key="WindowUpdater_lblWriting">写入扇区</sys:String>
+    <sys:String x:Key="WindowUpdater_btnClose">关闭</sys:String>
+
+    <sys:String x:Key="UcPressure_lblInfo">读取压力传感器</sys:String>
+    <sys:String x:Key="UcPressure_lblSensor">标准压力传感器 :</sys:String>
+    <sys:String x:Key="UcPressure_lblTimes">次数[1-20] :</sys:String>
+    <sys:String x:Key="UcPressure_lblInterval">间隔(ms)[11-10000] :</sys:String>
+    <sys:String x:Key="UcPressure_item01">SPP 压力</sys:String>
+    <sys:String x:Key="UcPressure_itme02">RPP1 压力</sys:String>
+    <sys:String x:Key="UcPressure_item03">RPP2 压力</sys:String>
+    <sys:String x:Key="UcPressure_btnOK">执行</sys:String>
+
+    <sys:String x:Key="WindowSimpleTest_lblTestNO">测试号:</sys:String>
+    <sys:String x:Key="WindowSimpleTest_lblItemNO">项目号:</sys:String>
+    <sys:String x:Key="WindowSimpleTest_lblRackNO">样本架号:</sys:String>
+    <sys:String x:Key="WindowSimpleTest_lblSamplePos">样本位置:</sys:String>
+    <sys:String x:Key="WindowSimpleTest_lblAnalyzeMethod">分析方法:</sys:String>
+    <sys:String x:Key="WindowSimpleTest_lblR1Pos">R1位置:</sys:String>
+    <sys:String x:Key="WindowSimpleTest_lblR2Pos">R2位置:</sys:String>
+    <sys:String x:Key="WindowSimpleTest_lblDeluentPos">稀释液位置:</sys:String>
+    <sys:String x:Key="WindowSimpleTest_btnSendSub">发送</sys:String>
+    <sys:String x:Key="WindowSimpleTest_btnStart">开始</sys:String>
+    <sys:String x:Key="WindowSimpleTest_btnMoveRack">移除样本架</sys:String>
+    <sys:String x:Key="WindowSimpleTest_btnPushRack">移动样本架</sys:String>
+    <sys:String x:Key="WindowSimpleTest_btnTray">仓储</sys:String>
+    <sys:String x:Key="WindowSimpleTest_cmbAnalyzeMethod_item01">A1 步</sys:String>
+    <sys:String x:Key="WindowSimpleTest_cmbAnalyzeMethod_item02">A2 步</sys:String>
+    <sys:String x:Key="WindowSimpleTest_cmbAnalyzeMethod_item03">B1 步</sys:String>
+    <sys:String x:Key="WindowSimpleTest_cmbAnalyzeMethod_item04">B2 步</sys:String>
+    <sys:String x:Key="WindowSimpleTest_cmbAnalyzeMethod_item05">B3 步</sys:String>
+    <sys:String x:Key="WindowSimpleTest_cmbAnalyzeMethod_item06">C1 步</sys:String>
+    <sys:String x:Key="WindowSimpleTest_cmbAnalyzeMethod_item07">C2 步</sys:String>
+    <sys:String x:Key="WindowSimpleTest_lblR3Pos">R3 位置:</sys:String>
+    <sys:String x:Key="WindowSimpleTest_lblR4Pos">R3 位置:</sys:String>
+    <sys:String x:Key="WindowSimpleTest_lblS1Channel">S1 通道:</sys:String>
+    <sys:String x:Key="WindowSimpleTest_lblS2Channel">S2 通道:</sys:String>
+    <sys:String x:Key="WindowSimpleTest_cmbAChannel">A</sys:String>
+    <sys:String x:Key="WindowSimpleTest_cmbBChannel">B</sys:String>
+    <sys:String x:Key="WindowSimpleTest_btnClose">关闭</sys:String>
+    <sys:String x:Key="WindowSimpleTest_chkIsEmergency">紧急样本</sys:String>
+
+    <sys:String x:Key="WindowBackp_Title">备份项目参数</sys:String>
+    <sys:String x:Key="WindowBackp_btnBackup">备份</sys:String>
+    <sys:String x:Key="WindowBackp_btnClose">关闭</sys:String>
+    <sys:String x:Key="WindowBackp_datagrid_Col1">项目号</sys:String>
+    <sys:String x:Key="WindowBackp_datagrid_Col2">项目名称</sys:String>
+
+    <sys:String x:Key="WindowRestore_Title">还原项目参数</sys:String>
+    <sys:String x:Key="WindowRestore_btnRestore">还原</sys:String>
+    <sys:String x:Key="WindowRestore_btnClose">关闭</sys:String>
+    <sys:String x:Key="WindowRestore_datagrid_Col1">项目编号</sys:String>
+    <sys:String x:Key="WindowRestore_datagrid_Col2">项目名称</sys:String>
+
+    <!-- Maintenance模块 之单体调整 -->
+    <sys:String x:Key="UcUnitAdjust_lblUnitPosition">Unit Position</sys:String>
+    <sys:String x:Key="UcUnitAdjust_lblUnitSpeed">Unit Speed</sys:String>
+    <sys:String x:Key="UcUnitAdjust_lblUnitIOStatus">Unit IO Status</sys:String>
+    <sys:String x:Key="UcUnitAdjust_lblSensor">Sensor</sys:String>
+    <sys:String x:Key="UcUnitAdjust_lblOutPort">Out Port</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnStopUnit">Stop Unit</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnAllCoffOn">ALLCOFF-ON</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnAllCoffOFF">ALLCOFF-OFF</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnCoffOn">COFF-ON</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnCoffOff">COFF-OFF</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnStandby">STANDBY</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnAdd1">+1</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnAdd10">+10</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnSub1">-1</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnSub10">-10</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnMoveForward">+</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnMoveBackward">-</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnRepeatMove">Reciprocate</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnSavePmcPos">Save</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnGo">GO</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnOffset">Go Offset</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnUnitEdit">Unit Edit</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnIOEdit">IO Edit</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnON">ON</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnOff">OFF</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnBackward1">&lt;--</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnBackward2">DOWN</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnBackward3">OPEN</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnBackward4">Home</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnForward1">--></sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnForward2">UP</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnForward3">CLOSE</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnForward4">Push</sys:String>
+    <sys:String x:Key="UcUnitAdjust_btnForward5">Carry</sys:String>
+    <sys:String x:Key="UcUnitAdjust_dataGridViewGroup_Col1">Unit</sys:String>
+    <sys:String x:Key="UcUnitAdjust_dataGridViewGroup_Col2">Name</sys:String>
+    <sys:String x:Key="UcUnitAdjust_dataGridViewPos_Col1">Name</sys:String>
+    <sys:String x:Key="UcUnitAdjust_dataGridViewPos_Col2">Value</sys:String>
+    <sys:String x:Key="UcUnitAdjust_dgvwSpeeds_Col1">SysParameter ID</sys:String>
+    <sys:String x:Key="UcUnitAdjust_dgvwSpeeds_Col2">Description</sys:String>
+    <sys:String x:Key="UcUnitAdjust_dgvwSpeeds_Col3">Description</sys:String>
+    <sys:String x:Key="UcUnitAdjust_dtORG_Col1">Name</sys:String>
+    <sys:String x:Key="UcUnitAdjust_dtORG_Col2">Port ID</sys:String>
+    <sys:String x:Key="UcUnitAdjust_dtORG_Col3">Status</sys:String>
+    <sys:String x:Key="UcUnitAdjust_dtSensorOrPort_Col1">Name</sys:String>
+    <sys:String x:Key="UcUnitAdjust_dtSensorOrPort_Col2">Status</sys:String>
+    <sys:String x:Key="UcUnitAdjust_chkCheckSafety">Safety</sys:String>
+    <sys:String x:Key="UcUnitAdjust_chkLiquid">Check Liquid</sys:String>
+    <sys:String x:Key="UcUnitAdjust_chkHomeStandby">Home Standby</sys:String>
+    <sys:String x:Key="WindowPMCParamsSet_Title">PMC</sys:String>
+    <sys:String x:Key="WindowPMCParamsSet_DevName">DevName</sys:String>
+    <sys:String x:Key="WindowPMCParamsSet_dtParams_Col1">ID</sys:String>
+    <sys:String x:Key="WindowPMCParamsSet_dtParams_Col2">Name</sys:String>
+    <sys:String x:Key="WindowPMCParamsSet_dtParams_Col3">Value</sys:String>
+    <sys:String x:Key="WindowPMCParamsSet_btnSave">Save</sys:String>
+    <sys:String x:Key="WindowPMCParamsSet_btnCancel">Cancel</sys:String>
+    
+    <sys:String x:Key="WindowErrorMessage_Title">出错啦！</sys:String>
+    <sys:String x:Key="WindowErrorMessage_WarningInformation">错误信息</sys:String>
+    <sys:String x:Key="Button_CancelText">取消</sys:String>
+    <sys:String x:Key="Button_IgnoreText">忽略</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="000001">数据存储成功!</sys:String>
+    <sys:String x:Key="000003">数据删除完成</sys:String>
+    <sys:String x:Key="000006">密码不合法</sys:String>
+    <sys:String x:Key="000007">值不正确</sys:String>
+    <sys:String x:Key="000008">超出范围！</sys:String>
+    <sys:String x:Key="000009">连接成功!</sys:String>
+    <sys:String x:Key="000011">确定继续吗 ?</sys:String>
+    <sys:String x:Key="000012">确定执行</sys:String>
+    <sys:String x:Key="000013">成功</sys:String>
+    <sys:String x:Key="000014">失败</sys:String>
+    <sys:String x:Key="000018">添加</sys:String>
+    <sys:String x:Key="000019">更新</sys:String>
+    <sys:String x:Key="000020">连接失败!</sys:String>
+    <sys:String x:Key="000021">输入空</sys:String>
+    <sys:String x:Key="000022">所设置的值冲突</sys:String>
+    <sys:String x:Key="000023">确定</sys:String>
+    <sys:String x:Key="000024">取消</sys:String>
+    <sys:String x:Key="000025">Yes</sys:String>
+    <sys:String x:Key="000026">No</sys:String>
+    <sys:String x:Key="000027">小数部分不正确</sys:String>
+    <sys:String x:Key="000028">数据库不可用，请检查数据库设置</sys:String>
+    <sys:String x:Key="000029">试剂 {0} (名称:{1}) 在 {2:yyyy/MM/dd}过期.</sys:String>
+    <sys:String x:Key="000030">起始时间大于结束时间</sys:String>
+    <sys:String x:Key="000031">确定删除吗?</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="010001">数据校准成功!</sys:String>
+    <sys:String x:Key="010002">参数"XMinScale","XMaxScale"Errors</sys:String>
+    <sys:String x:Key="010003">X Chart</sys:String>
+    <sys:String x:Key="010004">参数"RMinScale","RMaxScale"Errors</sys:String>
+    <sys:String x:Key="010005">R Chart</sys:String>
+    <sys:String x:Key="010006">准多个测试方差: 存在不同浓度的点{ 0 }({ 1 } %),超过项目参数设置({ 2 } %).&#x000A;</sys:String>
+    <sys:String x:Key="010007">添加校准数据: CalibrationID={0},ItemName={1},RefID={2},Type={3},LotNo={4},ExpDate={5},Pass={6},Actived={7},RegisterDate={8}</sys:String>
+    <sys:String x:Key="010008">校准数据(CalibrationID:{0} ,ItemName:{1} ,LotN0:{2} ,Creation date:{3} ,Expiration date:{4}) is Actived</sys:String>
+    <sys:String x:Key="010009">校准点[{0}]与项目参数[{1}]不匹配,确定变换吗?"</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="020001">你确定删除项目{0}吗？</sys:String>
+    <sys:String x:Key="020002">请输入项目名称和项目编号.</sys:String>
+    <sys:String x:Key="020003">使用项目数量达到最大值</sys:String>
+    <sys:String x:Key="020004">项目编号的范围是 1-99</sys:String>
+    <sys:String x:Key="020005">项目编号已经存在</sys:String>
+    <sys:String x:Key="020006">定标数据已经存在</sys:String>
+    <sys:String x:Key="020007">控制规则仍然存在</sys:String>
+    <sys:String x:Key="020008">项目已经存在</sys:String>
+    <sys:String x:Key="020009">测试申请已经存在</sys:String>
+    <sys:String x:Key="020010">添加新项目,项目编号={0},项目名称={1}</sys:String>
+    <sys:String x:Key="020011">删除项目,项目编号={0},项目名称={1}</sys:String>
+    <sys:String x:Key="020012">更新项目参数,项目编号={0},项目名称={1},参数名称={2},修改前={3},修改后={4}</sys:String>
+    <sys:String x:Key="020013">ConC1 ~ ConC8 按照升序排列</sys:String>
+    <sys:String x:Key="020014">{0} 吸量(前空气柱,后空气柱,样本)必须大于排量</sys:String>
+    <sys:String x:Key="020015">{0} 图表({1})低值必须小于高值</sys:String>
+    <sys:String x:Key="020016">RLU 低值必须小于高值</sys:String>
+    <sys:String x:Key="020017">ConC低值必须小于高值</sys:String>
+    <sys:String x:Key="020018">启用项目数超过注册项目数.请重新选择！</sys:String>
+    <sys:String x:Key="020019">项目名称已经存在</sys:String>
+    <sys:String x:Key="020020">这个项目的定标申请已经注册，不能修改点数。</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="030001">全部复位</sys:String>
+    <sys:String x:Key="030002">冲洗管路</sys:String>
+    <sys:String x:Key="030003">读取R1_T条码...</sys:String>
+    <sys:String x:Key="030004">读取R2_T条码...</sys:String>
+    <sys:String x:Key="030005">R1_T液面探测...</sys:String>
+    <sys:String x:Key="030006">R2_T液面探测...</sys:String>
+    <sys:String x:Key="030007">清洗液液面探测...</sys:String>
+    <sys:String x:Key="030009">所有备用进程 {0} / {1}</sys:String>
+    <sys:String x:Key="030013">清洗类型是 {0}, {1} / {2}</sys:String>
+    <sys:String x:Key="030014">完成. 序列码: {0},  错误码: {1}</sys:String>
+    <sys:String x:Key="030015">水箱容量不足！</sys:String>
+    <sys:String x:Key="030016">废液满！</sys:String>
+    <sys:String x:Key="030024">请输入液体数量！</sys:String>
+    <sys:String x:Key="030025">请输入正确的试剂数量！</sys:String>
+    <sys:String x:Key="030027">条码不正确！</sys:String>
+    <sys:String x:Key="030028">通道 {0}, 试剂已经存在.一个试剂位置只能放一个试剂瓶.</sys:String>
+    <sys:String x:Key="030034">碱性液体数量短缺！</sys:String>
+    <sys:String x:Key="030035">请选择操作.</sys:String>
+    <sys:String x:Key="030036">所有备用尚未执行.</sys:String>
+    <sys:String x:Key="030037">紧急停止, 错误代码: {0}</sys:String>
+    <sys:String x:Key="030040">设备连接错误发生时,切换到离线模式.</sys:String>
+    <sys:String x:Key="030041">请选择试剂.</sys:String>
+    <sys:String x:Key="030042">请添加试剂瓶, 待所有试剂瓶添加完成,开始试剂检测.</sys:String>
+    <sys:String x:Key="030044">试剂瓶编号.：{0},	容量 ： {1}</sys:String>
+    <sys:String x:Key="030046">读取试剂条码失败,错误码：{0}</sys:String>
+    <sys:String x:Key="030047">检查试剂余量失败,错误码{0}</sys:String>
+    <sys:String x:Key="030048">更新试剂余量信息</sys:String>
+    <sys:String x:Key="030052">检查试剂信息</sys:String>
+    <sys:String x:Key="030061">输入的通道号不可用.请输入 1~40.</sys:String>
+    <sys:String x:Key="030062">输入的通道号不可用.请输入 1~20.</sys:String>
+    <sys:String x:Key="030063">试剂液面探测通道 {0} 测试结果：{1}、　R1/R2 位置：{2}</sys:String>
+    <sys:String x:Key="030064">试剂液面探测通道 {0} 测试结果：{1}、　R3 位置：{2}</sys:String>
+    <sys:String x:Key="030065">此项目已经注册.</sys:String>
+    <sys:String x:Key="030066">不能够注册！</sys:String>
+    <sys:String x:Key="030068">试剂空!</sys:String>
+    <sys:String x:Key="030069">选择</sys:String>
+    <sys:String x:Key="030070">选择所有</sys:String>
+    <sys:String x:Key="030071">清除所有</sys:String>
+    <sys:String x:Key="030072">确定</sys:String>
+    <sys:String x:Key="030073">取消</sys:String>
+    <sys:String x:Key="030074">废液满</sys:String>
+    <sys:String x:Key="030075">水箱空</sys:String>
+    <sys:String x:Key="030076">清洗液空</sys:String>
+    <sys:String x:Key="030077">强化清洗液空</sys:String>
+    <sys:String x:Key="030078">洗针液空</sys:String>
+    <sys:String x:Key="030079">清洗液2空</sys:String>
+    <sys:String x:Key="030080">（{0}）的余量时{1} mL.</sys:String>
+    <sys:String x:Key="030081">{0}的温度超过了正常范围.</sys:String>
+    <sys:String x:Key="030082">RW_T</sys:String>
+    <sys:String x:Key="030083">DT_T</sys:String>
+    <sys:String x:Key="030084">DR_T</sys:String>
+    <sys:String x:Key="030085">SUB_T</sys:String>
+    <sys:String x:Key="030086">R1_T</sys:String>
+    <sys:String x:Key="030087">R2_T</sys:String>
+    <sys:String x:Key="030088">{0}温度报警.</sys:String>
+    <sys:String x:Key="030089">({0})用完.</sys:String>
+    <sys:String x:Key="030090">{0}的温度严重警告.</sys:String>
+    <sys:String x:Key="030091">({0}）不够使用.</sys:String>
+    <sys:String x:Key="030092">参数(R1_T 通道) 不正确.</sys:String>
+    <sys:String x:Key="030093">参数(R2_T 通道) 不正确.</sys:String>
+    <sys:String x:Key="030094">{0} 不能添加.请先在数据库中添加该试剂。</sys:String>
+    <sys:String x:Key="030095">R{0}_T 通道不能为空!</sys:String>
+    <sys:String x:Key="030096">无反应杯!</sys:String>
+    <sys:String x:Key="030097">反应杯还剩 [{0}], 小于 [{1}]!</sys:String>
+    <sys:String x:Key="030099">{0}的温度报警.</sys:String>
+    <sys:String x:Key="030100">不能条码 {0}为 {1}, 以为 {1}已经存在, 请删除当前输入，重新编辑.</sys:String>
+    <sys:String x:Key="030101">检测到输入错误,请纠正错误!</sys:String>
+    <sys:String x:Key="030102">添加试剂盘, 位置={0}, 有效期={1}, 类型={2}, 产品号={3}, 容量={4}, 项目号={5}, 条码={6},批号={7}</sys:String>
+    <sys:String x:Key="030103">移除试剂瓶, 试剂类型={0}, 位置={1}</sys:String>
+    <sys:String x:Key="030104">更改试剂信息:</sys:String>
+    <sys:String x:Key="030105">更新试剂{2}，barcode={0}, Slot={1}->0</sys:String>
+    <sys:String x:Key="030106">添加试剂( barcode={0}, Slot={1})</sys:String>
+    <sys:String x:Key="030107">更新试剂( barcode={0}, Slot={1}->{2})</sys:String>
+    <sys:String x:Key="030108">更新液面,通道号={0}, 液面检测={1}, 瓶子类型={2}, 探测高度={3}</sys:String>
+    <sys:String x:Key="030109">更新液面,没有发现数据行</sys:String>
+    <sys:String x:Key="030110">坏条码 :{0}</sys:String>
+    <sys:String x:Key="030111">试剂类型不匹配, 期望{0}, 而输入{1}</sys:String>
+    <sys:String x:Key="030112">试剂条码不可以修改为数据库中已经存在的试剂，输入 {0},试剂ID {1}</sys:String>
+    <sys:String x:Key="030113">更换试剂信息,</sys:String>
+    <sys:String x:Key="030114">更新试剂，修改试剂余量，位置={0}, 余量={1}->{2}</sys:String>
+    <sys:String x:Key="030115">更新试剂,增加试剂: 类型={0}, 位置={1},余量={2}</sys:String>
+    <sys:String x:Key="030116">添加新试剂, 名称={0}, 余量={1}, 位置={2}, id={3}, 条码={4}, 试剂类型={5}, 试剂名称={6}</sys:String>
+    <sys:String x:Key="030117">更新试剂量, 瓶子类型={0}, 位置={1}, 明恒={2}, 余量={3}</sys:String>
+    <sys:String x:Key="030118">替换试剂,名称={0},  类型={1},位置={2}, id={3}, 余量={4}, 条码={5}, 试剂名称={6}</sys:String>
+    <sys:String x:Key="030119">S12更换: 从位置[{1}]，类型={2}，移除试剂[{0}]</sys:String>
+    <sys:String x:Key="030120">S12更换: 插入试剂 [{0}] 到位置[{1}], 类型={2}</sys:String>
+    <sys:String x:Key="030121">S12更换: 创建试剂[ID={0},条码={1}] 位置 [{2}], 类型={3}</sys:String>
+    <sys:String x:Key="030122">更新需求( 剩余 : 前 ={0} ,后={1})</sys:String>
+    <sys:String x:Key="030123">试剂条码类型不匹配,类型{0}不正确,读到的类型是{1},条码:{2}</sys:String>
+    <sys:String x:Key="030124">添加新试剂到数据库, 条码={0}</sys:String>
+    <sys:String x:Key="030125">Bug: 容量减少的数据保存到数据库中的行必须>0</sys:String>
+    <sys:String x:Key="030126">VolmeDecrease, 瓶子类型={0}, 瓶子位置={1}, 冲洗量={2}</sys:String>
+    <sys:String x:Key="030127">项目编号:{0} ,批号:{1} ,项目类型:{2}</sys:String>
+    <sys:String x:Key="030128">没有条码</sys:String>
+    <sys:String x:Key="030129">试剂({0})严重警告.</sys:String>
+    <sys:String x:Key="030130">测试项目(项目编号:{0})已添加.</sys:String>
+    <sys:String x:Key="030131">测试项目(项目编号:{0})已移除.</sys:String>
+    <sys:String x:Key="030132">输入条码重复!通道 A, B 必须不相同!</sys:String>
+    <sys:String x:Key="030133">无效条码[{0}!条码中试剂类型是 '{1}', 而 {2}是可用的!</sys:String>
+    <sys:String x:Key="030134">在条码中，项目编号必须是'00', 项目={0}, 条码:{1}!</sys:String>
+    <sys:String x:Key="030135">空条码!请扫描（或者输入）条码!</sys:String>
+    <sys:String x:Key="030136">请检查和纠正错误.</sys:String>
+    <sys:String x:Key="030137">通道 {0}的条码输入错误，请检查和纠正错误.</sys:String>
+    <sys:String x:Key="030138">({0}) 条码</sys:String>
+    <sys:String x:Key="030139">({0}) 名称</sys:String>
+    <sys:String x:Key="030140">更换瓶子步骤: \n1,拿出仪器中的瓶子. \n2,扫描新瓶子上的条码，输入他们的名称.\n3,将新瓶子插入到仪器中. \n4,点击</sys:String>
+    <sys:String x:Key="030141">试剂值不可用.(试剂类型:[{0}] ,项目名称=[{1}] , 位置=[{2}] ,条码=[{3}])</sys:String>
+    <sys:String x:Key="030142">不可知的试剂类型[{0}], 位置 =[{1}]</sys:String>
+    <sys:String x:Key="030143">选择</sys:String>
+    <sys:String x:Key="030144">更新试剂:没有找到试剂, id={0}, 条码={1}</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="040001">测试编号: {0} , 第{1}次光检测试: {2}</sys:String>
+    <sys:String x:Key="040002">冲洗次数:</sys:String>
+    <sys:String x:Key="040003">液块编号:</sys:String>
+    <sys:String x:Key="040004">清理时间:</sys:String>
+    <sys:String x:Key="040006">指定次数:</sys:String>
+    <sys:String x:Key="040007">指定清洗分离模式:</sys:String>
+    <sys:String x:Key="040022">所有复位: {0} / {1}</sys:String>
+    <sys:String x:Key="040023">所有位置: 结束. 错误码: {0}</sys:String>
+    <sys:String x:Key="040024">清洁排气口</sys:String>
+    <sys:String x:Key="040027">正在冲洗管路: {0}, {1} / {2}</sys:String>
+    <sys:String x:Key="040028">冲洗管路:　错误码: {0}</sys:String>
+    <sys:String x:Key="040029">清理盘 [{0}] 在 {1}: {2} / {3}</sys:String>
+    <sys:String x:Key="040030">测试结束.错误码: {0}</sys:String>
+    <sys:String x:Key="040071">异常停止，错误代码: {0}</sys:String>
+    <sys:String x:Key="040072">请重新启动软件!</sys:String>
+    <sys:String x:Key="040090">初始位置</sys:String>
+    <sys:String x:Key="040091">大量废弃</sys:String>
+    <sys:String x:Key="040096">次数</sys:String>
+    <sys:String x:Key="040097">搬运反应杯:结束.错误代码: {0}</sys:String>
+    <sys:String x:Key="040098">搬运反应杯: {0} / {1}</sys:String>
+    <sys:String x:Key="040099">吐液量测试:完成.错误代码: {0}</sys:String>
+    <sys:String x:Key="040100">吐液量测试{0} / {1}</sys:String>
+    <sys:String x:Key="040101">清洗分离测试（{0}）:完成.错误代码: {1}</sys:String>
+    <sys:String x:Key="040102">清洗分离测试（{0}）: {1} / {2}</sys:String>
+    <sys:String x:Key="040103">不能初始化</sys:String>
+    <sys:String x:Key="040104">行动组序列.错误码: {0}</sys:String>
+    <sys:String x:Key="040105">行动组进程: {0} / {1}</sys:String>
+    <sys:String x:Key="040106">行动组RLU: {0}</sys:String>
+    <sys:String x:Key="040107">相同数量的清洗分离量</sys:String>
+    <sys:String x:Key="040108">最大数量的清洗分离量</sys:String>
+    <sys:String x:Key="040109">BF次数:</sys:String>
+    <sys:String x:Key="040110">S1__A 冲洗次数:</sys:String>
+    <sys:String x:Key="040111">S1__A 量(μL):</sys:String>
+    <sys:String x:Key="040112">S1__B 冲洗次数:</sys:String>
+    <sys:String x:Key="040113">S1__B 量(μL):</sys:String>
+    <sys:String x:Key="040114">S2__A 冲洗次数:</sys:String>
+    <sys:String x:Key="040115">S2__A 量(μL):</sys:String>
+    <sys:String x:Key="040116">S2__B 冲洗次数:</sys:String>
+    <sys:String x:Key="040117">S2__B 量(μL):</sys:String>
+    <sys:String x:Key="040118">管路</sys:String>
+    <sys:String x:Key="040119">BF 清洗</sys:String>
+    <sys:String x:Key="040120">S1_A 冲洗</sys:String>
+    <sys:String x:Key="040121">S1_B 冲洗</sys:String>
+    <sys:String x:Key="040122">S2_A 冲洗</sys:String>
+    <sys:String x:Key="040123">S2_B 冲洗</sys:String>
+    <sys:String x:Key="040124">样本</sys:String>
+    <sys:String x:Key="040125">R1/R2/R4</sys:String>
+    <sys:String x:Key="040126">R3</sys:String>
+    <sys:String x:Key="040127">稀释液</sys:String>
+    <sys:String x:Key="040129">指标 :</sys:String>
+    <sys:String x:Key="040130">次数 :</sys:String>
+    <sys:String x:Key="040131">位置 :</sys:String>
+    <sys:String x:Key="040132">管底部</sys:String>
+    <sys:String x:Key="040133">杯底</sys:String>
+    <sys:String x:Key="040134">液面检测测试完成.错误码{0}</sys:String>
+    <sys:String x:Key="040139">液面检测测试 {4} / {5}: {0}, 通道号: {1},结果: {2}, 针停止位置: {3}</sys:String>
+    <sys:String x:Key="040140">压力传感器 : {0} , 压力数据 : {1} , 读取压力 : {2}/{3}</sys:String>
+    <sys:String x:Key="040141">SPP 压力</sys:String>
+    <sys:String x:Key="040142">RPP1 压力</sys:String>
+    <sys:String x:Key="040143">RPP2 压力</sys:String>
+    <sys:String x:Key="040144">开始操作</sys:String>
+    <sys:String x:Key="040145">停止操作</sys:String>
+    <sys:String x:Key="040146">测量操作演示, 周期 {0}</sys:String>
+    <sys:String x:Key="040147">开始 ・ 停止 :</sys:String>
+    <sys:String x:Key="040148">R1P 液面探测测试失败, 漏掉了R1P的高度.</sys:String>
+    <sys:String x:Key="040149">R2P 液面探测测试失败, 漏掉了R2P的高度.</sys:String>
+    <sys:String x:Key="040150">SP 液面探测测试失败, 漏掉了RP的高度.</sys:String>
+    <sys:String x:Key="040151">高度不能为空.</sys:String>
+    <sys:String x:Key="040152">量不能为空.</sys:String>
+    <sys:String x:Key="040153">清除所有？</sys:String>
+    <sys:String x:Key="040157">读取样本条码完毕,错误码 : {0}</sys:String>
+    <sys:String x:Key="040158">样本架条码 : {0}, 条码 : {1}</sys:String>
+    <sys:String x:Key="040159">杯</sys:String>
+    <sys:String x:Key="040160">管</sys:String>
+    <sys:String x:Key="040161">样品</sys:String>
+    <sys:String x:Key="040162">样品类型 :</sys:String>
+    <sys:String x:Key="040163">读取条码:</sys:String>
+    <sys:String x:Key="040164">条码 :</sys:String>
+    <sys:String x:Key="040165">读取试剂条码完成,错误码 : {0}</sys:String>
+    <sys:String x:Key="040166">试剂{0}</sys:String>
+    <sys:String x:Key="040167">条码读取中...</sys:String>
+    <sys:String x:Key="040168">样本条码</sys:String>
+    <sys:String x:Key="040169">R1/R2/R4 条码</sys:String>
+    <sys:String x:Key="040170">R3 条码</sys:String>
+    <sys:String x:Key="040171">读取条码失败</sys:String>
+    <sys:String x:Key="040172">读取条码完毕</sys:String>
+    <sys:String x:Key="040173">{3},通道: {0}, 结果 : {1}, 条码: {2}</sys:String>
+    <sys:String x:Key="040174">结束.错误编码 : {0}</sys:String>
+    <sys:String x:Key="040175">必须是10的倍数</sys:String>
+    <sys:String x:Key="040176">测光间隔: {0} is changed {1}</sys:String>
+    <sys:String x:Key="040177">检查所有</sys:String>
+    <sys:String x:Key="040178">液面检查: {0}, 通道: {1}, 结果: {2}, 针停止位置: {3}</sys:String>
+    <sys:String x:Key="040179">不检查所有</sys:String>
+
+    <sys:String x:Key="040180">DR_T 位置:</sys:String>
+    <sys:String x:Key="040181">DR_T 耗时:</sys:String>
+    <sys:String x:Key="040182">RW_T 位置:</sys:String>
+    <sys:String x:Key="040183">RW_T 耗时:</sys:String>
+    <sys:String x:Key="040184">DT_T 位置:</sys:String>
+    <sys:String x:Key="040185">DT_T 耗时:</sys:String>
+    <sys:String x:Key="040186">更新稀释液失败,错误编码：{0}</sys:String>
+
+    <sys:String x:Key="040187">信息</sys:String>
+    <sys:String x:Key="040188">警告</sys:String>
+    <sys:String x:Key="040189">错误</sys:String>
+    <sys:String x:Key="040190">开始位置</sys:String>
+    <sys:String x:Key="040191">检测次数</sys:String>
+    <sys:String x:Key="040192">检测RLU:{0}, dark:{1} {2}/{3}</sys:String>
+    <sys:String x:Key="040193">S1 位置:</sys:String>
+    <sys:String x:Key="040194">S1 量(μL)</sys:String>
+    <sys:String x:Key="040195">S2 位置:</sys:String>
+    <sys:String x:Key="040196">S2 量(μL)</sys:String>
+    <sys:String x:Key="040197">更新系统参数,参数名={0},更新前={1},更新后={2}</sys:String>
+    <sys:String x:Key="040198">升级SubCPU.</sys:String>
+    <sys:String x:Key="040199">开始单元驱动,总计={0},间隔={1}</sys:String>
+    <sys:String x:Key="040200">停止单元驱动.</sys:String>
+    <sys:String x:Key="040201">按序开始: {0}.</sys:String>
+    <sys:String x:Key="040202">序列 [{0},{1}] 结束,错误码={2}.</sys:String>
+    <sys:String x:Key="040203">开始压力测试,传感器={0}, 次数={1}, 间隔={2}</sys:String>
+    <sys:String x:Key="040204">开始传感器检测,测试次数={0}, 显示时间={1}, 间隔={2}</sys:String>
+    <sys:String x:Key="040205">开始读取条码,类型={0}</sys:String>
+    <sys:String x:Key="040206">量(μL)</sys:String>
+    <sys:String x:Key="040207">稀释瓶:</sys:String>
+    <sys:String x:Key="040208">备份参数成功.</sys:String>
+    <sys:String x:Key="040209">备份参数失败.[{0}]</sys:String>
+    <sys:String x:Key="040210">还原参数成功.</sys:String>
+    <sys:String x:Key="040211">还原参数失败.[{0}]</sys:String>
+    <sys:String x:Key="040212">试剂 (ID={0}) 的条码[{1}] 已经存在, 不能重写.</sys:String>
+    <sys:String x:Key="040213">瓶子类型不能为空</sys:String>
+    <sys:String x:Key="040214">项目 (No.={0}) 的条码 {1} 不存在</sys:String>
+    <sys:String x:Key="040215">操作</sys:String>
+    <sys:String x:Key="040216">调试</sys:String>
+    <sys:String x:Key="040217">开始时间不能大于结束时间</sys:String>
+    <sys:String x:Key="040218">添加试剂瓶:ID={0},瓶子类型={1},脉冲={2},量={3}</sys:String>
+    <sys:String x:Key="040219">更新试剂瓶:ID={0},瓶子类型={1},脉冲={2},量={3}</sys:String>
+    <sys:String x:Key="040220">删除试剂瓶:ID={0},瓶子类型={1},脉冲={2},量={3}</sys:String>
+    <sys:String x:Key="040221">不能小于最低量</sys:String>
+    <sys:String x:Key="040222">不能大于初始量</sys:String>
+    <sys:String x:Key="040223">可用的液体量不能少于试剂交换的需求</sys:String>
+    <sys:String x:Key="040224">试剂交换需求不能大于可用的液体量</sys:String>
+    <sys:String x:Key="040225">所设置值必须大于{0}</sys:String>
+    <sys:String x:Key="040226">所设置值必须小于{0}</sys:String>
+    <sys:String x:Key="040227">wake up time</sys:String>
+    <sys:String x:Key="040228">sleep time</sys:String>
+    <sys:String x:Key="040229">Yes</sys:String>
+    <sys:String x:Key="040230">No</sys:String>
+    <sys:String x:Key="040231">Auto wash</sys:String>
+    <sys:String x:Key="040232">Times</sys:String>
+    <sys:String x:Key="040233">{0}: {1}/{2}</sys:String>
+    <sys:String x:Key="040234">Position :</sys:String>
+    <sys:String x:Key="040235">Volume(μL) :</sys:String>
+    <sys:String x:Key="040236">Valve No:</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="050001">样本编号不能为空.</sys:String>
+    <sys:String x:Key="050002">确认删除这个样本的测试申请{0}？</sys:String>
+    <sys:String x:Key="050003">确认删除这个样本架的测试申请{0}？</sys:String>
+    <sys:String x:Key="050004">项目设置{0}已经存在.</sys:String>
+    <sys:String x:Key="050005">设置项目最多可以包含 {0}个测试请求。</sys:String>
+    <sys:String x:Key="050006">样本架 [{0}] 已经在使用。</sys:String>
+    <sys:String x:Key="050007">QC 条码不能为空.</sys:String>
+    <sys:String x:Key="050008">没有定标或者定标过期,确认是否继续.</sys:String>
+    <sys:String x:Key="050009">项目不存在</sys:String>
+    <sys:String x:Key="050010">不能添加项目设置:</sys:String>
+    <sys:String x:Key="050011">添加新病人申请,测试编号={0},项目编号={1},项目名称={2},样本编号={3}</sys:String>
+    <sys:String x:Key="050012">删除病人申请,测试编号={0},项目编号={1},项目名称={2}</sys:String>
+    <sys:String x:Key="050013">删除病人样本,样本编号={0},计数={1}</sys:String>
+    <sys:String x:Key="050014">添加项目设置,编号={0},名称={1}</sys:String>
+    <sys:String x:Key="050015">D删除病人样本架,架号={0},计数={1}</sys:String>
+    <sys:String x:Key="050017">变换病人信息,</sys:String>
+    <sys:String x:Key="050018">{0}:前={1},后={2};</sys:String>
+    <sys:String x:Key="050019">生日大于今天.</sys:String>
+    <sys:String x:Key="050020">样本日期大于今天.</sys:String>
+    <sys:String x:Key="050021">样本日期小于生日.</sys:String>
+    <sys:String x:Key="050022">控制名称不能为空.</sys:String>
+    <sys:String x:Key="050023">控制规则已经存在[{0}].</sys:String>
+    <sys:String x:Key="050024">没有已经添加的测试项目.</sys:String>
+    <sys:String x:Key="050026">过期日期不能为空.</sys:String>
+    <sys:String x:Key="050028">添加新的控制规则,名称={0},项目={1}</sys:String>
+    <sys:String x:Key="050029">删除控制规则,Name={0}</sys:String>
+    <sys:String x:Key="050030">更换控制信息,</sys:String>
+    <sys:String x:Key="050031">添加新QC申请,测试编号={0},项目编号={1},项目名称={2},样本编号={3}</sys:String>
+    <sys:String x:Key="050032">删除QC申请,测试编号={0},项目编号={1},项目名称={2}</sys:String>
+    <sys:String x:Key="050033">删除QC样本,样本编号={0},计数={1}</sys:String>
+    <sys:String x:Key="050034">删除QC架,架号={0},计数={1}</sys:String>
+    <sys:String x:Key="050035">QC条码不存在.</sys:String>
+    <sys:String x:Key="050036">QC条码不可用.</sys:String>
+    <sys:String x:Key="050037">CH</sys:String>
+    <sys:String x:Key="050038">CL</sys:String>
+    <sys:String x:Key="050039">删除项目设置,名称={0}</sys:String>
+    <sys:String x:Key="050040">添加新的项目设置,名称={0},可用={1},项目={2}</sys:String>
+    <sys:String x:Key="050041">名称不能为空.</sys:String>
+    <sys:String x:Key="050042">设置的项目[{0}]已经存在.</sys:String>
+    <sys:String x:Key="050043">变换项目[{0}]设置信息,</sys:String>
+    <sys:String x:Key="050044">样本架条码不可用</sys:String>
+    <sys:String x:Key="050045">确定删除这个定标测试申请吗?</sys:String>
+    <sys:String x:Key="050046">添加新的测试申请,测试计数={0},项目编码={1},项目名称={2},样本编号={3}</sys:String>
+    <sys:String x:Key="050047">删除定标,架号D={0}</sys:String>
+    <sys:String x:Key="050048">保存成功</sys:String>
+    <sys:String x:Key="050049">所有未测试的在 [{0}]中的QC样本将被删除.确定继续吗？?</sys:String>
+    <sys:String x:Key="050050">控制[{0}]已经存在.</sys:String>
+    <sys:String x:Key="050051">这条控制规则不是[{0}].</sys:String>
+    <sys:String x:Key="050052">至少需要一个测试项目.</sys:String>
+    <sys:String x:Key="050053">删除控制,条码={0}</sys:String>
+    <sys:String x:Key="050054">添加控制,条码={0}</sys:String>
+    <sys:String x:Key="050055">控制过期.</sys:String>
+    <sys:String x:Key="050056">样本 [{0}已经在样本架 [{1}].</sys:String>
+    <sys:String x:Key="050057">确定重做样本？[{0}]?</sys:String>
+    <sys:String x:Key="050058">样本架 [{0}]正在装载中.</sys:String>
+    <sys:String x:Key="050059">所有未测试的QC样本[{0}]将被删除.确定继续吗?</sys:String>
+    <sys:String x:Key="050060">试剂批号不能为空.</sys:String>
+    <sys:String x:Key="050061">样本架条码重复.</sys:String>
+    <sys:String x:Key="050062">确定删除此项目吗?</sys:String>
+    <sys:String x:Key="050063">更改定标信息,样本编号={0},项目编号={1},项目名称={2},注释={3}</sys:String>
+    <sys:String x:Key="050064">不能够修改测试因为没有可用的定标算法.</sys:String>
+    <sys:String x:Key="050065">主曲线校正点数量是0.</sys:String>
+    <sys:String x:Key="050066">主曲线点数量是0.</sys:String>
+    <sys:String x:Key="050067">更改QC样本信息,样本编号={0},QC条码={1},QC类型={2},试剂批号={3},注释={4}</sys:String>
+    <sys:String x:Key="050068">更改病人样本信息,样本编号={0},{1}:前={2},后={3};</sys:String>
+    <sys:String x:Key="050069">不能变更为已经存在的样本编号[{0}].</sys:String>
+    <sys:String x:Key="050070">至少包含一个测试请求</sys:String>
+    <sys:String x:Key="050071">样本正在测试中.</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="060010">仪器发生错误,错误编码：{0}</sys:String>
+    <sys:String x:Key="060011">设备方面没有反应, 通讯失败,错误编码：{0}</sys:String>
+    <sys:String x:Key="060012">用户停止</sys:String>
+    <sys:String x:Key="060013">仪器异常停止</sys:String>
+    <sys:String x:Key="060026">文件导出失败</sys:String>
+    <sys:String x:Key="060027">测试结果</sys:String>
+    <sys:String x:Key="060029">打印日期:</sys:String>
+    <sys:String x:Key="060030">文件导出成功</sys:String>
+    <sys:String x:Key="060031">测试序列完成.</sys:String>
+    <sys:String x:Key="060032">测试开始</sys:String>
+    <sys:String x:Key="060087">确定放弃更新下面的试剂? \r\n{0}</sys:String>
+    <sys:String x:Key="060097">病人</sys:String>
+    <sys:String x:Key="060098">QC</sys:String>
+    <sys:String x:Key="060099">定标</sys:String>
+    <sys:String x:Key="060141">请稍等温度正常。</sys:String>
+    <sys:String x:Key="060144">点 {0} 的CV 超出范围.</sys:String>
+    <sys:String x:Key="060163">打印错误.请检查打印机.</sys:String>
+    <sys:String x:Key="060164">开始</sys:String>
+    <sys:String x:Key="060165">暂停</sys:String>
+    <sys:String x:Key="060166">重新开始</sys:String>
+    <sys:String x:Key="060167">样本架 {0}已经载入, 条码:{1}, 存在样本架:{2},错误编码:{3}</sys:String>
+    <sys:String x:Key="060168">是</sys:String>
+    <sys:String x:Key="060169">否</sys:String>
+    <sys:String x:Key="060170">开始分析...</sys:String>
+    <sys:String x:Key="060171">暂停采样 :{0}</sys:String>
+    <sys:String x:Key="060172">分析完成.</sys:String>
+    <sys:String x:Key="060173">恢复采样.</sys:String>
+    <sys:String x:Key="060174">发生异常停止.[{0}]</sys:String>
+    <sys:String x:Key="060175">发生分析错误.[{0}]{1}</sys:String>
+    <sys:String x:Key="060176">没有测试申请.</sys:String>
+    <sys:String x:Key="060177">R1</sys:String>
+    <sys:String x:Key="060178">R2</sys:String>
+    <sys:String x:Key="060179">R3</sys:String>
+    <sys:String x:Key="060180">S1</sys:String>
+    <sys:String x:Key="060181">S2</sys:String>
+    <sys:String x:Key="060182">稀释液</sys:String>
+    <sys:String x:Key="060183">样本</sys:String>
+    <sys:String x:Key="060184">{0} 分离 {1}.</sys:String>
+    <sys:String x:Key="060185">确定</sys:String>
+    <sys:String x:Key="060186">失败</sys:String>
+    <sys:String x:Key="060187">测试 {0}: {1}</sys:String>
+    <sys:String x:Key="060188">测试开始.</sys:String>
+    <sys:String x:Key="060189">测试结束.</sys:String>
+    <sys:String x:Key="060190">测试错误:{0}</sys:String>
+    <sys:String x:Key="060191">开始分析失败.[{0}]</sys:String>
+    <sys:String x:Key="060192">将要更换[{0}]->[{1}].</sys:String>
+    <sys:String x:Key="060193">反应杯装载 {0}.</sys:String>
+    <sys:String x:Key="060194">转移到 {0} {1}.</sys:String>
+    <sys:String x:Key="060195">测试不合格:{0}</sys:String>
+    <sys:String x:Key="060196">采样暂停.</sys:String>
+    <sys:String x:Key="060197">SPP堵塞:{0}</sys:String>
+    <sys:String x:Key="060198">没有数据可以删除</sys:String>
+    <sys:String x:Key="060199">数据包含在最后的3个月，确定删除吗？</sys:String>
+    <sys:String x:Key="060200">确认删除记录{0}?</sys:String>
+    <sys:String x:Key="060201">-</sys:String>
+    <sys:String x:Key="060202">确定</sys:String>
+    <sys:String x:Key="060203">无</sys:String>
+    <sys:String x:Key="060204">失效</sys:String>
+    <sys:String x:Key="060205">等待 {0} sec</sys:String>
+    <sys:String x:Key="060206">R4</sys:String>
+    <sys:String x:Key="UnableDiluteSample">测试 {0}:不稀释样本.</sys:String>
+    <sys:String x:Key="060207">开始分析失败:</sys:String>
+    <sys:String x:Key="060208">暂停分析失败:</sys:String>
+    <sys:String x:Key="060209">重新分析失败:</sys:String>
+    <sys:String x:Key="060210">{0}测试重做.</sys:String>
+    <sys:String x:Key="060211">M123定标</sys:String>
+    <sys:String x:Key="060212">重做这些测试:{0}</sys:String>
+    <sys:String x:Key="060213">{0}测试设置重做.(QC or 定标测试不可以重做.)</sys:String>
+    <sys:String x:Key="060214">一些测试被删除.</sys:String>
+    <sys:String x:Key="060215">Reagent is exchanging,can not resume analyze.</sys:String>
+    <sys:String x:Key="060216">Pause for cup feed failed,can not resume analyze.</sys:String>
+    <sys:String x:Key="060217">Can not continue for no cuvette.</sys:String>
+    <sys:String x:Key="060218">Sub error [{0}].</sys:String>
+    <sys:String x:Key="060219">Can not continue for sub error happened.</sys:String>
+    <sys:String x:Key="060220">[Error contained]</sys:String>
+    <sys:String x:Key="060221">Door of R1_T or R2_T is open.Please have a check.</sys:String>
+    <sys:String x:Key="060222">[LIS]Save LIS data failed.</sys:String>
+    <sys:String x:Key="060223">[LIS]Received {0} test requests from barcode [{1}] at position {2}.</sys:String>
+    <sys:String x:Key="060224">[LIS]Download sample [{0}] at position {1}</sys:String>
+    <sys:String x:Key="060225">[LIS]Download sample [{0}] failed at position {1}.Error code:{2}</sys:String>
+    <sys:String x:Key="060226">[LIS]Transfer test result in ({0}).</sys:String>
+    <sys:String x:Key="060228">[LIS]Result transfered failed.Error code:{0}</sys:String>
+    <sys:String x:Key="060229">[LIS]Init LIS connection failed.</sys:String>
+    <sys:String x:Key="060230">Test aborted.[Flag={0}]</sys:String>
+    <sys:String x:Key="060231">[LIS] Consecutive failed {0} times.</sys:String>
+    <sys:String x:Key="060232">Please restart AE-240 before analyse started.</sys:String>
+    <sys:String x:Key="060233">[LIS]Reject invalid items [{0}] from barcode [{1}] at position {2}.</sys:String>
+    <sys:String x:Key="060234">Pause for LIS timeout,can not resume analyze.</sys:String>
+    <sys:String x:Key="060235">定标质控超出范围!可以继续使用该次定标数据,但建议重新定标!</sys:String>
+    <!--  -->
+    <sys:String x:Key="1600001">[{0}]仪器状态错误.</sys:String>
+    <sys:String x:Key="1600002">[{0}]R1不足.</sys:String>
+    <sys:String x:Key="1600003">[{0}]R2不足.</sys:String>
+    <sys:String x:Key="1600004">[{0}]R3不足.</sys:String>
+    <sys:String x:Key="1600005">[{0}]S1不足.</sys:String>
+    <sys:String x:Key="1600006">[{0}]S2不足.</sys:String>
+    <sys:String x:Key="1600007">[{0}]稀释液不足.</sys:String>
+    <sys:String x:Key="1600008">[{0}]样本不足.</sys:String>
+    <sys:String x:Key="1600009">[{0}]反应杯不足.</sys:String>
+    <sys:String x:Key="1600010">[{0}]RW_T温度严重警告.</sys:String>
+    <sys:String x:Key="1600011">[{0}]R1_T温度严重警告.</sys:String>
+    <sys:String x:Key="1600012">[{0}]R2_T温度严重警告.</sys:String>
+    <sys:String x:Key="1600013">[{0}]DR_T温度严重警告.</sys:String>
+    <sys:String x:Key="1600014">[{0}]Sub_T温度严重警告.</sys:String>
+    <sys:String x:Key="1600015">[{0}]DT_T温度严重警告.</sys:String>
+    <sys:String x:Key="1600016">[{0}]RW_T温度警告.</sys:String>
+    <sys:String x:Key="1600017">[{0}]R1_T温度警告.</sys:String>
+    <sys:String x:Key="1600018">[{0}]R2_T温度警告.</sys:String>
+    <sys:String x:Key="1600019">[{0}]DR_T温度警告.</sys:String>
+    <sys:String x:Key="1600020">[{0}]Sub_T温度警告.</sys:String>
+    <sys:String x:Key="1600021">[{0}]DT_T温度警告.</sys:String>
+    <sys:String x:Key="1600022">[{0}]废液满.</sys:String>
+    <sys:String x:Key="1600023">[{0}]纯化水空.</sys:String>
+    <sys:String x:Key="1600024">[{0}]清洗剂1空.</sys:String>
+    <sys:String x:Key="1600025">[{0}]稀释液空.</sys:String>
+    <sys:String x:Key="1600026">[{0}]BF空.</sys:String>
+    <sys:String x:Key="1600027">[{0}]清洗剂2空.</sys:String>
+    <sys:String x:Key="1600028">[{0}]SPP堵塞.</sys:String>
+    <sys:String x:Key="1600029">[{0}]用户强制终止.</sys:String>
+    <sys:String x:Key="1600030">[{0}]时间图不支持.</sys:String>
+    <sys:String x:Key="1600031">[{0}]没有定标或者定标过期.</sys:String>
+    <sys:String x:Key="1600032">[{0}]机器发生碰撞.</sys:String>
+    <sys:String x:Key="1600033">[{0}]LIS超时.</sys:String>
+    <sys:String x:Key="1600034">[{0}]LIS掉线.</sys:String>
+    <sys:String x:Key="1600035">[{0}]用户强制停止.</sys:String>
+    <sys:String x:Key="1600036">[{0}]未检测到样本试管.</sys:String>
+    <sys:String x:Key="1600037">[{0}]没有设置足够的试剂进行QC或定标测试.</sys:String>
+    <sys:String x:Key="1600038">[{0}]没有设置足够的试剂进行样本测试.</sys:String>
+    <sys:String x:Key="1600039">[{0}]R4不足.</sys:String>
+    <sys:String x:Key="1600041">[{0}]Door of R1T or R2T is open.</sys:String>
+    <sys:String x:Key="1600042">[{0}]EM rack been pulled out.</sys:String>
+    <sys:String x:Key="1600099">[{0}]不可知原因.</sys:String>
+
+
+    <!--  -->
+    <sys:String x:Key="080001">样本编号</sys:String>
+    <sys:String x:Key="080002">病人姓名</sys:String>
+    <sys:String x:Key="080003">生日</sys:String>
+    <sys:String x:Key="080004">性别</sys:String>
+    <sys:String x:Key="080005">接收编号</sys:String>
+    <sys:String x:Key="080006">采集日期</sys:String>
+    <sys:String x:Key="080007">测试日期</sys:String>
+    <sys:String x:Key="080008">科室</sys:String>
+    <sys:String x:Key="080009">报告日期</sys:String>
+    <sys:String x:Key="080010">注释</sys:String>
+
+    <sys:String x:Key="080011">索引</sys:String>
+    <sys:String x:Key="080012">项目名称</sys:String>
+    <sys:String x:Key="080013">类型</sys:String>
+    <sys:String x:Key="080014">RLU</sys:String>
+    <sys:String x:Key="080015">结果</sys:String>
+    <sys:String x:Key="080016">单位</sys:String>
+    <sys:String x:Key="080017">诊断</sys:String>
+    <sys:String x:Key="080018">标记</sys:String>
+    <sys:String x:Key="080019">测试报告</sys:String>
+
+    <sys:String x:Key="080020">测试编号</sys:String>
+    <sys:String x:Key="080021">名称</sys:String>
+    <sys:String x:Key="080022">条码</sys:String>
+    <sys:String x:Key="080023">测试时间</sys:String>
+    <sys:String x:Key="080024">类型</sys:String>
+    <sys:String x:Key="080025">测试项目</sys:String>
+    <sys:String x:Key="080026">RLU</sys:String>
+    <sys:String x:Key="080027">结果</sys:String>
+    <sys:String x:Key="080028">单位</sys:String>
+    <sys:String x:Key="080029">诊断</sys:String>
+    <sys:String x:Key="080030">标记</sys:String>
+    <sys:String x:Key="080031">打印</sys:String>
+    <sys:String x:Key="080032">LIS</sys:String>
+    <sys:String x:Key="080033">汇总报表</sys:String>
+    <sys:String x:Key="080034">打印日期:</sys:String>
+    <sys:String x:Key="080035">参考范围</sys:String>
+
+    <sys:String x:Key="080036">送检医生</sys:String>
+    <sys:String x:Key="080037">样本类型</sys:String>
+    <sys:String x:Key="080038">临床诊断</sys:String>
+    <sys:String x:Key="080039">床号</sys:String>
+    <sys:String x:Key="080040">检验医生</sys:String>
+    <sys:String x:Key="080041">审核者</sys:String>
+    <sys:String x:Key="080042">此报告仅对本样本负责</sys:String>
+    
+    <!--  -->
+    <sys:String x:Key="090001">发送系统参数...</sys:String>
+    <sys:String x:Key="090002">发送系统参数失败.</sys:String>
+    <sys:String x:Key="090003">发送系统参数完成.</sys:String>
+    <sys:String x:Key="090004">系统运行中.</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="100001">BF清洗泵</sys:String>
+    <sys:String x:Key="100002">稀释单元泵</sys:String>
+    <sys:String x:Key="100003">样本清洗泵</sys:String>
+    <sys:String x:Key="100004">RD1清洗泵</sys:String>
+    <sys:String x:Key="100005">RD2清洗泵</sys:String>
+    <sys:String x:Key="100006">泵类型: {0}, 总计监控时间={1} 小时 {2} 分钟 {3} 秒, 总计抽泵次数={4}, 
+                                             最后抽泵次数={5}, 增加抽泵次数={6}, 最后监控开始时间={7},报告时间={8}</sys:String>
+    <sys:String x:Key="100007">流量警告</sys:String>
+
+    <!--  -->
+    <sys:String x:Key="100011">请输入旧密码.</sys:String>
+    <sys:String x:Key="100012">请输入新密码.</sys:String>
+    <sys:String x:Key="100013">请确认新密码.</sys:String>
+    <sys:String x:Key="100014">两次新密码不相同.</sys:String>
+    <sys:String x:Key="100015">密码已经修改.</sys:String>
+    <sys:String x:Key="100016">密码修改失败.</sys:String>
+    <sys:String x:Key="100017">旧密码错误.</sys:String>
+    <sys:String x:Key="100018">在过去的10次中，新密码已经在使用.</sys:String>
+
+
+</ResourceDictionary>

@@ -1,0 +1,209 @@
+﻿<UserControl x:Class="Tool.ParamConfig.View.TFormulasView0"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tool.ParamConfig.View"             
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="1000" 
+             Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <local:ColorConvert x:Key="ColorConvert"/>
+    </UserControl.Resources>
+
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#e8edf1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="320"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <Button x:Name="btnAddFormula" 
+                        Content="新增" 
+                        Width="70" Height="26" 
+                        Background="#829db2"
+                        Foreground="White" FontSize="12"
+                        Style="{StaticResource CommonButtonStyle}"
+                        Margin="10,0,0,0" 
+                        Click="btnAddFormula_Click" />
+                <Button x:Name="btnDeleteFormula" 
+                        Content="删除" 
+                        Width="70" Height="26" 
+                        Background="#829db2"
+                        Foreground="White" FontSize="12"
+                        Style="{StaticResource CommonButtonStyle}"
+                        Margin="25,0,0,0" 
+                        Click="btnDeleteFormula_Click" />
+                <Button x:Name="btnSaveFormula" 
+                        Content="保存修改" 
+                        Width="80" Height="26" 
+                        Background="#ecc158"
+                        Foreground="White" FontSize="12"
+                        Style="{StaticResource CommonButtonStyle}"
+                        Margin="40,0,0,0" 
+                        Click="btnSaveFormula_Click" />
+
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+
+            </StackPanel>
+        </Grid>
+
+        <DataGrid Grid.Row="1"  x:Name="dgFormula"  
+                  AutoGenerateColumns="False" 
+                  SelectionMode="Single"
+                  AlternationCount="2"  
+                  RowHeaderWidth="0" 
+                  CanUserAddRows="False" 
+                  VerticalAlignment="Top"
+                  RowHeight="25"
+                  FontSize="12"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                  SelectionUnit="Cell"
+                  Style="{StaticResource CommonDataGridStyle}"
+                  ColumnHeaderStyle="{StaticResource CommonDataGridColumnHeaderStyle}"                 
+                  RowStyle="{StaticResource CommonDataGridRowStyle}" LoadingRow="dgFormula_LoadingRow"
+                  >
+
+            <DataGrid.Columns>
+
+
+                <DataGridTemplateColumn Header="" Width="35">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid Background="Transparent" Margin="-2">
+                                <CheckBox IsChecked="{Binding Path=IsSelected,Mode=TwoWay,UpdateSourceTrigger=LostFocus}"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          FontSize="15"/>
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="公式号" Width="60" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid Background="Transparent" Margin="-2">
+                                <TextBox BorderBrush="Transparent" 
+                                         Text="{Binding Path=Id,Mode=OneWay}"
+                                         HorizontalContentAlignment="Center"
+                                         VerticalContentAlignment="Center"
+                                         VerticalAlignment="Stretch"
+                                         Foreground="Red"
+                                         IsReadOnly="True"/>
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="PId" Width="60" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid Background="Transparent" Margin="-2">
+                                <TextBox BorderBrush="Transparent" 
+                                         Text="{Binding Path=PId,Mode=TwoWay,UpdateSourceTrigger=LostFocus}"
+                                         Background="{Binding Path=PId,Converter={StaticResource ColorConvert}}"   
+                                         HorizontalContentAlignment="Center"
+                                         VerticalContentAlignment="Center"
+                                         VerticalAlignment="Stretch"
+                                         Foreground="Red"
+                                         />
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="字符串PId" Width="60" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid Background="Transparent" Margin="-2">
+                                <TextBox BorderBrush="Transparent" 
+                                         Text="{Binding Path=StrId,Mode=TwoWay,UpdateSourceTrigger=LostFocus}"
+                                         HorizontalContentAlignment="Center"
+                                         VerticalContentAlignment="Center"
+                                         VerticalAlignment="Stretch"
+                                         Foreground="Red"
+                                         />
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="公式名称" Width="180" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid Background="Transparent" Margin="-2">
+                                <TextBox BorderBrush="Transparent" 
+                                         Text="{Binding Path=FormulaName,Mode=TwoWay,UpdateSourceTrigger=LostFocus}"
+                                         HorizontalContentAlignment="Left"
+                                         Padding="5,0,0,0"
+                                         VerticalContentAlignment="Center"
+                                         VerticalAlignment="Stretch"
+                                         Foreground="Blue"/>
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="脚本内容"  MinWidth="480" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid Background="Transparent" Margin="-2">
+                                <TextBox BorderBrush="Transparent" 
+                                   Text="{Binding Path=ScriptContent,Mode=TwoWay,UpdateSourceTrigger=LostFocus}"                                               
+                                         HorizontalContentAlignment="Center"
+                                         VerticalContentAlignment="Center"
+                                         VerticalAlignment="Stretch"
+                                         Foreground="Blue"
+                                         IsReadOnly="True"/>
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="测试一下"  MinWidth="120" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid Background="Transparent" Margin="-2">
+                                <TextBox BorderBrush="Transparent" 
+                                   Text="测试一下"                                               
+                                         HorizontalContentAlignment="Center"
+                                         VerticalContentAlignment="Center"
+                                         VerticalAlignment="Stretch"
+                                         Foreground="Blue"
+                                         IsReadOnly="True"/>
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid x:Name="girdChioce" 
+              Background="Transparent"
+              VerticalAlignment="Top"
+              Margin="1,46,0,0">
+            <Popup x:Name="popChioce" 
+                   PopupAnimation="Fade" 
+                   PlacementTarget="{Binding ElementName=girdChioce}" 
+                   Placement="Top"
+                   AllowsTransparency="True" 
+                   StaysOpen="False" 
+                   IsOpen="False">
+            </Popup>
+        </Grid>
+
+    </Grid>
+</UserControl>
