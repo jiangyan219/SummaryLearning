@@ -157,6 +157,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Attribute", "Attribute", "{606B37C3-AC5E-472A-A6F6-A66EF8EDD04D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Custom", "Custom", "{BF0C19D2-EDCD-4722-90F5-641031C8D3BD}"
+	ProjectSection(SolutionItems) = preProject
+		Grammar\Attribute\Custom\Readme.txt = Grammar\Attribute\Custom\Readme.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{6269DB63-3994-45B1-AF55-9C55BF0ED81C}"
 	ProjectSection(SolutionItems) = preProject
@@ -164,6 +167,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttitudeDemo", "Grammar\Attribute\Framework\AttitudeDemo\AttitudeDemo.csproj", "{B91B70DB-547B-4719-8395-FB7408A88BB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationAttritudeDemo", "Grammar\Attribute\Custom\AuthorizationAttritudeDemo\AuthorizationAttritudeDemo.csproj", "{D8AD34ED-6D17-4AEA-8DE9-4C65B635A180}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -401,6 +406,14 @@ Global
 		{B91B70DB-547B-4719-8395-FB7408A88BB8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B91B70DB-547B-4719-8395-FB7408A88BB8}.Release|x86.ActiveCfg = Release|Any CPU
 		{B91B70DB-547B-4719-8395-FB7408A88BB8}.Release|x86.Build.0 = Release|Any CPU
+		{D8AD34ED-6D17-4AEA-8DE9-4C65B635A180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8AD34ED-6D17-4AEA-8DE9-4C65B635A180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8AD34ED-6D17-4AEA-8DE9-4C65B635A180}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D8AD34ED-6D17-4AEA-8DE9-4C65B635A180}.Debug|x86.Build.0 = Debug|Any CPU
+		{D8AD34ED-6D17-4AEA-8DE9-4C65B635A180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8AD34ED-6D17-4AEA-8DE9-4C65B635A180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8AD34ED-6D17-4AEA-8DE9-4C65B635A180}.Release|x86.ActiveCfg = Release|Any CPU
+		{D8AD34ED-6D17-4AEA-8DE9-4C65B635A180}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -479,9 +492,10 @@ Global
 		{BF0C19D2-EDCD-4722-90F5-641031C8D3BD} = {606B37C3-AC5E-472A-A6F6-A66EF8EDD04D}
 		{6269DB63-3994-45B1-AF55-9C55BF0ED81C} = {606B37C3-AC5E-472A-A6F6-A66EF8EDD04D}
 		{B91B70DB-547B-4719-8395-FB7408A88BB8} = {6269DB63-3994-45B1-AF55-9C55BF0ED81C}
+		{D8AD34ED-6D17-4AEA-8DE9-4C65B635A180} = {BF0C19D2-EDCD-4722-90F5-641031C8D3BD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		VisualSVNWorkingCopyRoot = .
 		SolutionGuid = {CD10FFEC-94D3-49FB-906A-87FA60256109}
+		VisualSVNWorkingCopyRoot = .
 	EndGlobalSection
 EndGlobal

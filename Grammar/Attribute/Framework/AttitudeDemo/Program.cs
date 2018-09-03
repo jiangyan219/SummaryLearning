@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace AttitudeDemo
 {
+    #region [Conditional("DEBUG")] 特性
     class Program
     {
         static void Main(string[] args)
@@ -35,4 +36,6 @@ namespace AttitudeDemo
             Console.WriteLine(msg);
         }
     }
+
+    #endregion [Conditional("DEBUG")] 特性
 }
