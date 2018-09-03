@@ -40,7 +40,7 @@ namespace AuthorizationAttritudeDemo
     public class AllowExecuteAttribute : Attribute
     {
         /// <summary> 
-        ///  
+        ///  允许执行
         /// </summary> 
         /// <param name="allowedUsers">允许执行的用户名的串联字符串</param> 
         public AllowExecuteAttribute(string allowedUsers)
