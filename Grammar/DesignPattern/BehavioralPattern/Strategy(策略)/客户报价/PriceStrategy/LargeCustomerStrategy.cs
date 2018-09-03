@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PriceStrategy
 {
+    /// <summary>
+    /// 大客户策略
+    /// </summary>
     public class LargeCustomerStrategy : Strategy
     {
        

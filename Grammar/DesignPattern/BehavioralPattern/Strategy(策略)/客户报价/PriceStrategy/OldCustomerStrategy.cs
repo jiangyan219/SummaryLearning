@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PriceStrategy
 {
+    /// <summary>
+    /// 老用户策略
+    /// </summary>
     public class OldCustomerStrategy : Strategy
     {
         public double CalcPrice(double goodPrice)
