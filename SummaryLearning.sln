@@ -154,6 +154,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Array", "Array", "{9876F971
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppDyadicArray", "Grammar\Variable\Array\ConsoleAppDyadicArray\ConsoleAppDyadicArray.csproj", "{66D35109-CE39-4214-A623-B42B6B7CABCD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Attribute", "Attribute", "{606B37C3-AC5E-472A-A6F6-A66EF8EDD04D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Custom", "Custom", "{BF0C19D2-EDCD-4722-90F5-641031C8D3BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{6269DB63-3994-45B1-AF55-9C55BF0ED81C}"
+	ProjectSection(SolutionItems) = preProject
+		Grammar\Attribute\Framework\Readme.txt = Grammar\Attribute\Framework\Readme.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttitudeDemo", "Grammar\Attribute\Framework\AttitudeDemo\AttitudeDemo.csproj", "{B91B70DB-547B-4719-8395-FB7408A88BB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -382,6 +393,14 @@ Global
 		{66D35109-CE39-4214-A623-B42B6B7CABCD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{66D35109-CE39-4214-A623-B42B6B7CABCD}.Release|x86.ActiveCfg = Release|Any CPU
 		{66D35109-CE39-4214-A623-B42B6B7CABCD}.Release|x86.Build.0 = Release|Any CPU
+		{B91B70DB-547B-4719-8395-FB7408A88BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B91B70DB-547B-4719-8395-FB7408A88BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B91B70DB-547B-4719-8395-FB7408A88BB8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B91B70DB-547B-4719-8395-FB7408A88BB8}.Debug|x86.Build.0 = Debug|Any CPU
+		{B91B70DB-547B-4719-8395-FB7408A88BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B91B70DB-547B-4719-8395-FB7408A88BB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B91B70DB-547B-4719-8395-FB7408A88BB8}.Release|x86.ActiveCfg = Release|Any CPU
+		{B91B70DB-547B-4719-8395-FB7408A88BB8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -456,9 +475,13 @@ Global
 		{72591CBE-71E8-4754-A46C-D28388F5BAAF} = {4DDC9F3C-C349-486C-AD5B-76F6164F1207}
 		{9876F971-1806-422C-B23E-F99300E3432D} = {72591CBE-71E8-4754-A46C-D28388F5BAAF}
 		{66D35109-CE39-4214-A623-B42B6B7CABCD} = {9876F971-1806-422C-B23E-F99300E3432D}
+		{606B37C3-AC5E-472A-A6F6-A66EF8EDD04D} = {4DDC9F3C-C349-486C-AD5B-76F6164F1207}
+		{BF0C19D2-EDCD-4722-90F5-641031C8D3BD} = {606B37C3-AC5E-472A-A6F6-A66EF8EDD04D}
+		{6269DB63-3994-45B1-AF55-9C55BF0ED81C} = {606B37C3-AC5E-472A-A6F6-A66EF8EDD04D}
+		{B91B70DB-547B-4719-8395-FB7408A88BB8} = {6269DB63-3994-45B1-AF55-9C55BF0ED81C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CD10FFEC-94D3-49FB-906A-87FA60256109}
 		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {CD10FFEC-94D3-49FB-906A-87FA60256109}
 	EndGlobalSection
 EndGlobal
