@@ -89,7 +89,53 @@ namespace Clone
             }
             return listNew;
         }
+
+        /// <summary>
+        /// 获取对象的改变状态list
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="currentobj">当前对象</param>
+        /// <param name="originalObj">改变前的对象</param>
+        /// <returns></returns>
+        public static List<EntityStateModel> GetChanges<T>(this T currentobj, T originalObj)
+        {
+            List<EntityStateModel> result = new List<EntityStateModel>();
+            Type t = currentobj.GetType();
+
+            var properties = t.GetProperties();
+
+            object originalValueObj = null;
+            object currentValueObj = null;
+            string originalValue = string.Empty;
+            string currentValue = string.Empty;
+
+            foreach (var item in properties)
+            {
+                if (item.PropertyType.IsPublic && item.CanRead && item.CanWrite)
+                {
+                    if (item.PropertyType.IsValueType || item.PropertyType.Name == typeof(string).Name)
+                    {
+                        currentValueObj = item.GetValue(currentobj, null);
+                        originalValueObj = item.GetValue(originalObj, null);
+                        currentValue = currentValueObj == null ? string.Empty : currentValueObj.ToString();
+                        originalValue = originalValueObj == null ? string.Empty : originalValueObj.ToString();
+
+                        if (currentValue != originalValue)
+                        {
+                            result.Add(new EntityStateModel() { Name = item.Name, CurrentValue = currentValue, OriginalValue = originalValue });
+                        }
+                    }
+                }
+                else
+                {
+                    continue;
+                }
+            }
+
+            return result;
+        }
     }
+
 }
 
 /*----------------------------------------------------------------

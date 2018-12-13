@@ -27,6 +27,8 @@ namespace Clone
             stu.Name = "腾腾";
 
 
+            var changes=  stu.GetChanges(stuClone);
+
 
             Console.ReadLine();
         }
