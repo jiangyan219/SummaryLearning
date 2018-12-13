@@ -28,7 +28,15 @@ namespace Clone
 
 
             var changes=  stu.GetChanges(stuClone);
+            if (changes.Count > 0)
+            {
+                StringBuilder logMsg = new StringBuilder();
 
+                foreach (var item in changes)
+                {
+                    Console.WriteLine("名称={0},原值={1},更新值={2}", item.Name, item.OriginalValue, item.CurrentValue);                 
+                }
+            }
 
             Console.ReadLine();
         }
