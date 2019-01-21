@@ -190,6 +190,7 @@ namespace Clone
             List<Cup> cups = new List<Cup>();
             List<Cup> cupsClone = new List<Cup>();
             List<Cup> cupsDeepClone = new List<Cup>();
+            List<Cup> cupsCopyOjbect = new List<Cup>();
 
             for (int i = 0; i < 3; i++)
             {
@@ -201,6 +202,7 @@ namespace Clone
             }
             cupsClone = (List<Cup>)cups.CloneList();//浅克隆
             cupsDeepClone = cups.DeepCloneObject();//深克隆
+            cupsCopyOjbect = cups.CopyOjbect();
 
             foreach (var cup in cups)//修改原型数据
             {
@@ -231,6 +233,17 @@ namespace Clone
             Console.WriteLine("");
 
             Console.WriteLine("***List静态扩展深克隆测试-深克隆***");
+            foreach (var cup in cupsDeepClone)
+            {
+                Console.WriteLine("cup-Height:" + cup.Height);//1、2、3
+                Console.WriteLine("cup-RL:" + cup.RL);//200
+                Console.WriteLine("cup-foot:" + cup.c.foot);//白色
+                Console.WriteLine("");
+            }
+            Console.WriteLine("=================================");
+            Console.WriteLine("");
+
+            Console.WriteLine("***List静态扩展深克隆测试-深克隆2***");
             foreach (var cup in cupsDeepClone)
             {
                 Console.WriteLine("cup-Height:" + cup.Height);//1、2、3
