@@ -25,7 +25,7 @@ namespace Clone
     /// <summary>
     /// Cup
     /// </summary>
-    //[Serializable]
+    [Serializable]
     public class Cup : ICloneable
     {
         public int Height { get; set; }
@@ -54,7 +54,7 @@ namespace Clone
     /// <summary>
     /// 杯子的局部颜色属性
     /// </summary>
-    //[Serializable]
+    [Serializable]
     public class Colors
     {
         /// <summary>

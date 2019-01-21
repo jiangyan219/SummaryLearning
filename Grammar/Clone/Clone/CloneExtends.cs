@@ -60,23 +60,22 @@ namespace Clone
         }
 
         /// <summary>
-        /// 对象深度克隆;同时克隆对象中的引用类型
+        /// 对象深度克隆;同时克隆对象中的引用类型;对象必须被序列化过才行;
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="t"></param>
         /// <returns></returns>
         public static T DeepCloneObject<T>(this T t) where T : class
         {
-            T objResult = null;
-            using (MemoryStream ms = new MemoryStream())
+            T model = null;
+            using (MemoryStream memoryStream = new MemoryStream())
             {
-                BinaryFormatter bf = new BinaryFormatter();
-                bf.Serialize(ms, t);
-
-                ms.Position = 0;
-                objResult = (T)bf.Deserialize(ms);
+                BinaryFormatter binaryFormatter = new BinaryFormatter();
+                binaryFormatter.Serialize(memoryStream, t);
+                memoryStream.Position = 0;
+                model = (T)binaryFormatter.Deserialize(memoryStream);
             }
-            return objResult;
+            return model;
         }
 
         /// <summary>

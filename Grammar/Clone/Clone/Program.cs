@@ -164,7 +164,7 @@ namespace Clone
             Console.WriteLine("cup-foot:" + cup.c.foot);//白色
             Console.WriteLine("");
 
-            Cup cup1 = cup.CloneObject();
+            Cup cup1 = cup.DeepCloneObject();
             cup1.Height = 10;
             cup1.RL = 100;
             cup1.c.foot = "灰色";
@@ -176,7 +176,7 @@ namespace Clone
 
             Console.WriteLine("cup-Height:" + cup.Height);//20
             Console.WriteLine("cup-RL:" + cup.RL);//200
-            Console.WriteLine("cup-foot:" + cup.c.foot);//灰色 值发生改变了
+            Console.WriteLine("cup-foot:" + cup.c.foot);//白色 深克隆后对象中的引用类型的值不发生改变
             Console.WriteLine("");
 
         }
