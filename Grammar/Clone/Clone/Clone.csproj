@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CloneExtends.cs" />
+    <Compile Include="Cup.cs" />
     <Compile Include="EntityStateModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

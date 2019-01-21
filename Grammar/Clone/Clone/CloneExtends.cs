@@ -20,7 +20,9 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Reflection;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Clone
 {
@@ -30,12 +32,12 @@ namespace Clone
     public static class CloneExtends
     {
         /// <summary>
-        /// 对象深度克隆
+        /// 对象浅克隆;无法克隆对象中的引用类型
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="t"></param>
         /// <returns></returns>
-        public static T DeepCloneObject<T>(this T t) where T : class
+        public static T CloneObject<T>(this T t) where T : class
         {
             T model = System.Activator.CreateInstance<T>();                     //实例化一个T类型对象
             PropertyInfo[] propertyInfos = model.GetType().GetProperties();     //获取T对象的所有公共属性
@@ -55,6 +57,26 @@ namespace Clone
                 }
             }
             return model;
+        }
+
+        /// <summary>
+        /// 对象深度克隆;同时克隆对象中的引用类型
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        public static T DeepCloneObject<T>(this T t) where T : class
+        {
+            T objResult = null;
+            using (MemoryStream ms = new MemoryStream())
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(ms, t);
+
+                ms.Position = 0;
+                objResult = (T)bf.Deserialize(ms);
+            }
+            return objResult;
         }
 
         /// <summary>
