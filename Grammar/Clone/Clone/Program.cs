@@ -244,7 +244,7 @@ namespace Clone
             Console.WriteLine("");
 
             Console.WriteLine("***List静态扩展深克隆测试-深克隆2***");
-            foreach (var cup in cupsDeepClone)
+            foreach (var cup in cupsCopyOjbect)
             {
                 Console.WriteLine("cup-Height:" + cup.Height);//1、2、3
                 Console.WriteLine("cup-RL:" + cup.RL);//200

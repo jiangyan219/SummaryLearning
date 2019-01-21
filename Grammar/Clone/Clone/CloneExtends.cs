@@ -119,28 +119,27 @@ namespace Clone
         }
 
         /// <summary>
-        /// 对象拷贝
+        /// 对象拷贝-无效
         /// </summary>
-        /// <param name="obj">被复制对象</param>
+        /// <param name="t">被复制对象</param>
         /// <returns>新对象</returns>
-        public static  T CopyOjbect<T>(this T obj)where T:class
+        public static  T CopyOjbect<T>(this T t)where T:class
         {
-            if (obj == null)
+            if (t == null)
             {
                 return null;
             }
-            T targetDeepCopyObj;
-            Type targetType = obj.GetType();
-            //值类型  
-            if (targetType.IsValueType == true)
+            T model;
+            Type targetType = t.GetType();
+            
+            if (targetType.IsValueType == true)//值类型  
             {
-                targetDeepCopyObj = obj;
+                model = t;
             }
-            //引用类型   
-            else
+            else//引用类型  
             {
-                targetDeepCopyObj = System.Activator.CreateInstance<T>();   //创建引用对象   
-                System.Reflection.MemberInfo[] memberCollection = obj.GetType().GetMembers();
+                model = System.Activator.CreateInstance<T>();   //创建引用对象   
+                System.Reflection.MemberInfo[] memberCollection = t.GetType().GetMembers();
 
                 foreach (System.Reflection.MemberInfo member in memberCollection)
                 {
@@ -148,14 +147,14 @@ namespace Clone
                     if (member.MemberType == System.Reflection.MemberTypes.Field)
                     {
                         System.Reflection.FieldInfo field = (System.Reflection.FieldInfo)member;
-                        Object fieldValue = field.GetValue(obj);
+                        Object fieldValue = field.GetValue(t);
                         if (fieldValue is ICloneable)
                         {
-                            field.SetValue(targetDeepCopyObj, (fieldValue as ICloneable).Clone());
+                            field.SetValue(model, (fieldValue as ICloneable).Clone());
                         }
                         else
                         {
-                            field.SetValue(targetDeepCopyObj, CopyOjbect(fieldValue));
+                            field.SetValue(model, CopyOjbect(fieldValue));
                         }
 
                     }//拷贝属性
@@ -168,14 +167,14 @@ namespace Clone
                         {
                             try
                             {
-                                object propertyValue = myProperty.GetValue(obj, null);
+                                object propertyValue = myProperty.GetValue(t, null);
                                 if (propertyValue is ICloneable)
                                 {
-                                    myProperty.SetValue(targetDeepCopyObj, (propertyValue as ICloneable).Clone(), null);
+                                    myProperty.SetValue(model, (propertyValue as ICloneable).Clone(), null);
                                 }
                                 else
                                 {
-                                    myProperty.SetValue(targetDeepCopyObj, CopyOjbect(propertyValue), null);
+                                    myProperty.SetValue(model, CopyOjbect(propertyValue), null);
                                 }
                             }
                             catch (System.Exception ex)
@@ -186,7 +185,7 @@ namespace Clone
                     }
                 }
             }
-            return targetDeepCopyObj;
+            return model;
         }
 
 
@@ -242,8 +241,9 @@ namespace Clone
 
 /*----------------------------------------------------------------
  * 备    注 ：
- * 
- * 
+ * 浅克隆-CloneObject(单个对象)，CloneList(List)
+ * 深克隆-DeepCloneObject，即支持单个对象、也支持List；
+ * 。。。。。。。。。。。。。。。。。前提是需要序列化；
  * 
 *******************************************************************
  * Copyright @ JiangYan 2018. All rights reserved.
