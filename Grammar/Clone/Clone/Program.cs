@@ -10,10 +10,11 @@ namespace Clone
     {
         static void Main(string[] args)
         {
-            TestICloneable();
-            TestICloneableDeep();
-            TestCloneExtends();
-            TestDeepCloneExtends();
+            //TestICloneable();
+            //TestICloneableDeep();
+            //TestCloneExtends();
+            //TestDeepCloneExtends();
+            TestCloneExtendsList();
             Console.ReadLine();
             Student stu = new Student()
             {
@@ -178,6 +179,68 @@ namespace Clone
             Console.WriteLine("cup-RL:" + cup.RL);//200
             Console.WriteLine("cup-foot:" + cup.c.foot);//白色 深克隆后对象中的引用类型的值不发生改变
             Console.WriteLine("");
+
+        }
+
+        /// <summary>
+        /// 静态扩展深克隆List测试-浅克隆+深克隆
+        /// </summary>
+        static void TestCloneExtendsList()
+        {
+            List<Cup> cups = new List<Cup>();
+            List<Cup> cupsClone = new List<Cup>();
+            List<Cup> cupsDeepClone = new List<Cup>();
+
+            for (int i = 0; i < 3; i++)
+            {
+                Cup cup = new Cup();
+                cup.Height = 1+i;
+                cup.RL = 10+i;
+                cup.c = new Colors() { foot = "白色", Top = "无色" };
+                cups.Add(cup);
+            }
+            cupsClone = (List<Cup>)cups.DeepCloneList();//浅克隆
+            cupsDeepClone = cups.DeepCloneObject();//深克隆
+
+            foreach (var cup in cups)//修改原型数据
+            {
+                cup.Height = 0;//修改值类型数据
+                cup.c.foot = "红色";//修改引用类型数据
+            }
+
+            Console.WriteLine("***List静态扩展深克隆测试-原型***");
+            foreach (var cup in cups)
+            {
+                Console.WriteLine("cup-Height:" + cup.Height);//20
+                Console.WriteLine("cup-RL:" + cup.RL);//200
+                Console.WriteLine("cup-foot:" + cup.c.foot);//白色
+                Console.WriteLine("");
+            }
+            Console.WriteLine("=================================");
+            Console.WriteLine("");            
+
+            Console.WriteLine("***List静态扩展深克隆测试-浅克隆***");
+            foreach (var cup in cupsClone)
+            {
+                Console.WriteLine("cup-Height:" + cup.Height);//1、2、3
+                Console.WriteLine("cup-RL:" + cup.RL);//200
+                Console.WriteLine("cup-foot:" + cup.c.foot);//红色
+                Console.WriteLine("");
+            }
+            Console.WriteLine("=================================");
+            Console.WriteLine("");
+
+            Console.WriteLine("***List静态扩展深克隆测试-深克隆***");
+            foreach (var cup in cupsDeepClone)
+            {
+                Console.WriteLine("cup-Height:" + cup.Height);//1、2、3
+                Console.WriteLine("cup-RL:" + cup.RL);//200
+                Console.WriteLine("cup-foot:" + cup.c.foot);//白色
+                Console.WriteLine("");
+            }
+            Console.WriteLine("=================================");
+            Console.WriteLine("");
+
 
         }
         #endregion
