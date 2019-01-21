@@ -199,7 +199,7 @@ namespace Clone
                 cup.c = new Colors() { foot = "白色", Top = "无色" };
                 cups.Add(cup);
             }
-            cupsClone = (List<Cup>)cups.DeepCloneList();//浅克隆
+            cupsClone = (List<Cup>)cups.CloneList();//浅克隆
             cupsDeepClone = cups.DeepCloneObject();//深克隆
 
             foreach (var cup in cups)//修改原型数据

@@ -58,9 +58,7 @@ namespace Clone
                 }
             }
             return model;
-        }
-
-        
+        }        
 
         /// <summary>
         /// 对象列表浅克隆
@@ -69,7 +67,7 @@ namespace Clone
         /// <typeparam name="T"></typeparam>
         /// <param name="tList"></param>
         /// <returns></returns>
-        public static IList<T> DeepCloneList<T>(this IList<T> tList) where T : class
+        public static IList<T> CloneList<T>(this IList<T> tList) where T : class
         {
             IList<T> listNew = new List<T>();
             foreach (var item in tList)
@@ -95,12 +93,13 @@ namespace Clone
             }
             return listNew;
         }
+
         #endregion
 
         #region 深克隆
 
         /// <summary>
-        /// 对象深度克隆;同时克隆对象中的引用类型;对象必须被序列化过才行;
+        /// 对象深度克隆;同时克隆对象中的引用类型;对象必须被序列化过才行；
         /// 同时支持对List的深度克隆，也是必须序列化
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -120,6 +119,7 @@ namespace Clone
         }
 
         #endregion
+
         /// <summary>
         /// 获取对象的改变状态list
         /// </summary>
