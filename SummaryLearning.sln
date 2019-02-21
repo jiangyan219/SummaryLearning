@@ -170,7 +170,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttitudeDemo", "Grammar\Att
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationAttritudeDemo", "Grammar\Attribute\Custom\AuthorizationAttritudeDemo\AuthorizationAttritudeDemo.csproj", "{D8AD34ED-6D17-4AEA-8DE9-4C65B635A180}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckStringLengthAttributeDemo", "CheckStringLengthAttributeDemo\CheckStringLengthAttributeDemo.csproj", "{7A4FF778-8B4F-4371-A2CD-EB3794F37DE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckStringLengthAttributeDemo", "Grammar\Attribute\Custom\CheckStringLengthAttributeDemo\CheckStringLengthAttributeDemo.csproj", "{7A4FF778-8B4F-4371-A2CD-EB3794F37DE9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clone", "Clone", "{C4863A50-BB3B-4AA6-81CD-E97640A6015B}"
 EndProject
