@@ -28,6 +28,10 @@ namespace Clone
     [Serializable]
     public class Cup : ICloneable
     {
+        public Cup()
+        {
+            this.c = new Colors();
+        }
         public int Height { get; set; }
         public int RL { get; set; }
         public Colors c { get; set; }

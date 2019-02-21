@@ -12,9 +12,9 @@ namespace Clone
         {
             //TestICloneable();
             //TestICloneableDeep();
-            //TestCloneExtends();
+            TestCloneExtends();
             //TestDeepCloneExtends();
-            TestCloneExtendsList();
+            //TestCloneExtendsList();
             Console.ReadLine();
             Student stu = new Student()
             {
@@ -132,10 +132,13 @@ namespace Clone
             Console.WriteLine("cup-foot:" + cup.c.foot);//白色
             Console.WriteLine("");
 
+            Cup cup2 = cup.CloneObject2();
             Cup cup1 = cup.CloneObject();
             cup1.Height = 10;
             cup1.RL = 100;
             cup1.c.foot = "灰色";
+
+            
 
             Console.WriteLine("cup1-Height:" + cup1.Height);//10
             Console.WriteLine("cup1-RL:" + cup1.RL);//100
@@ -146,7 +149,15 @@ namespace Clone
             Console.WriteLine("cup-RL:" + cup.RL);//200
             Console.WriteLine("cup-foot:" + cup.c.foot);//灰色 值发生改变了
             Console.WriteLine("");
-            
+            Console.WriteLine("=========================");
+
+            Console.WriteLine("***静态扩展深克隆测试***");
+            Console.WriteLine("cup-Height:" + cup2.Height);//20
+            Console.WriteLine("cup-RL:" + cup2.RL);//200
+            Console.WriteLine("cup-foot:" + cup2.c.foot);//白色
+            Console.WriteLine("");
+            Console.WriteLine("=========================");
+
         }
 
         /// <summary>

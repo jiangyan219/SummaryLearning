@@ -188,7 +188,48 @@ namespace Clone
             return model;
         }
 
+        public static T CloneObject2<T>(this T t) where T : class
+        {
+            T model = System.Activator.CreateInstance<T>();                     //实例化一个T类型对象
+            PropertyInfo[] propertyInfos = model.GetType().GetProperties();     //获取T对象的所有公共属性
+            foreach (PropertyInfo propertyInfo in propertyInfos)
+            {
+                //判断值是否为空，如果空赋值为null见else
+                if (propertyInfo.PropertyType.IsGenericType && propertyInfo.PropertyType.GetGenericTypeDefinition().Equals(typeof(Nullable<>)))
+                {
+                    //如果convertsionType为nullable类，声明一个NullableConverter类，该类提供从Nullable类到基础基元类型的转换
+                    NullableConverter nullableConverter = new NullableConverter(propertyInfo.PropertyType);
+                    //将convertsionType转换为nullable对的基础基元类型
+                    propertyInfo.SetValue(model, Convert.ChangeType(propertyInfo.GetValue(t), nullableConverter.UnderlyingType), null);
+                }
+                else
+                {
+                    if (propertyInfo.PropertyType.IsValueType)
+                    {
+                        propertyInfo.SetValue(model, Convert.ChangeType(propertyInfo.GetValue(t), propertyInfo.PropertyType), null);
+                    }
+                    else
+                    {
+                        //// T t2= Activator.CreateInstance<T>();
+                        ////propertyInfo.GetValue.CloneObject2();
+                        //// (propertyInfo.ReflectedType).CloneObject2();
+                        ////T t2=Activator.cre
+                        ////(object)propertyInfo.CloneObject2();
 
+                        //Type infoType = propertyInfo.PropertyType;
+                        //object obj = propertyInfo.GetValue(t,null);
+                        ////propertyInfo.SetValue(model, obj, null);
+                        //obj.CloneObject2();
+
+
+                        //propertyInfo.SetValue(model, propertyInfo.GetValue(t));
+                        propertyInfo.GetValue(t).CloneObject2();
+                    }                      
+                }
+                
+            }
+            return model;
+        }
         #endregion
 
         /// <summary>
