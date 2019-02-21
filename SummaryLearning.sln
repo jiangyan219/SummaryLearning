@@ -184,6 +184,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Decorator(装饰器)", "Dec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "Grammar\DesignPattern\StructuralPattern\Decorator(装饰器)\Decorator\Decorator.csproj", "{CD6D0572-F72F-4D7E-AAE5-C5B3B09D8FA2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Flyweight(享元)", "Flyweight(享元)", "{EF8D055B-D6E7-4F93-9CB7-1AD4FD8A47AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyweight", "Grammar\DesignPattern\StructuralPattern\Flyweight(享元)\Flyweight\Flyweight.csproj", "{DCE6D49E-30B7-4DDC-84CA-A19A1404B34D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -460,6 +464,14 @@ Global
 		{CD6D0572-F72F-4D7E-AAE5-C5B3B09D8FA2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CD6D0572-F72F-4D7E-AAE5-C5B3B09D8FA2}.Release|x86.ActiveCfg = Release|Any CPU
 		{CD6D0572-F72F-4D7E-AAE5-C5B3B09D8FA2}.Release|x86.Build.0 = Release|Any CPU
+		{DCE6D49E-30B7-4DDC-84CA-A19A1404B34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE6D49E-30B7-4DDC-84CA-A19A1404B34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE6D49E-30B7-4DDC-84CA-A19A1404B34D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DCE6D49E-30B7-4DDC-84CA-A19A1404B34D}.Debug|x86.Build.0 = Debug|Any CPU
+		{DCE6D49E-30B7-4DDC-84CA-A19A1404B34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCE6D49E-30B7-4DDC-84CA-A19A1404B34D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE6D49E-30B7-4DDC-84CA-A19A1404B34D}.Release|x86.ActiveCfg = Release|Any CPU
+		{DCE6D49E-30B7-4DDC-84CA-A19A1404B34D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -546,9 +558,11 @@ Global
 		{8AC2215B-11A7-44D0-B339-227EC1937270} = {BC00BDDD-BD11-49C7-8C20-A8E04FD91002}
 		{9C39BE7D-48AC-4572-80D0-16342C4527A0} = {CCA35D2F-A7F1-4062-A4DE-038F97AEB126}
 		{CD6D0572-F72F-4D7E-AAE5-C5B3B09D8FA2} = {9C39BE7D-48AC-4572-80D0-16342C4527A0}
+		{EF8D055B-D6E7-4F93-9CB7-1AD4FD8A47AC} = {CCA35D2F-A7F1-4062-A4DE-038F97AEB126}
+		{DCE6D49E-30B7-4DDC-84CA-A19A1404B34D} = {EF8D055B-D6E7-4F93-9CB7-1AD4FD8A47AC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		VisualSVNWorkingCopyRoot = .
 		SolutionGuid = {CD10FFEC-94D3-49FB-906A-87FA60256109}
+		VisualSVNWorkingCopyRoot = .
 	EndGlobalSection
 EndGlobal
