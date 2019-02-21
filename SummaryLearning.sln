@@ -178,6 +178,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clone", "Grammar\Clone\Clon
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Singleton(单例)", "Singleton(单例)", "{BC00BDDD-BD11-49C7-8C20-A8E04FD91002}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Grammar\DesignPattern\CreationalPattern\Singleton(单例)\Singleton\Singleton.csproj", "{8AC2215B-11A7-44D0-B339-227EC1937270}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -438,6 +440,14 @@ Global
 		{978896CC-C70F-47D0-8BE7-B4657C992991}.Release|Any CPU.Build.0 = Release|Any CPU
 		{978896CC-C70F-47D0-8BE7-B4657C992991}.Release|x86.ActiveCfg = Release|Any CPU
 		{978896CC-C70F-47D0-8BE7-B4657C992991}.Release|x86.Build.0 = Release|Any CPU
+		{8AC2215B-11A7-44D0-B339-227EC1937270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AC2215B-11A7-44D0-B339-227EC1937270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AC2215B-11A7-44D0-B339-227EC1937270}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8AC2215B-11A7-44D0-B339-227EC1937270}.Debug|x86.Build.0 = Debug|Any CPU
+		{8AC2215B-11A7-44D0-B339-227EC1937270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AC2215B-11A7-44D0-B339-227EC1937270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AC2215B-11A7-44D0-B339-227EC1937270}.Release|x86.ActiveCfg = Release|Any CPU
+		{8AC2215B-11A7-44D0-B339-227EC1937270}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -521,6 +531,7 @@ Global
 		{C4863A50-BB3B-4AA6-81CD-E97640A6015B} = {4DDC9F3C-C349-486C-AD5B-76F6164F1207}
 		{978896CC-C70F-47D0-8BE7-B4657C992991} = {C4863A50-BB3B-4AA6-81CD-E97640A6015B}
 		{BC00BDDD-BD11-49C7-8C20-A8E04FD91002} = {66984520-6525-4DE8-A823-F584C478152A}
+		{8AC2215B-11A7-44D0-B339-227EC1937270} = {BC00BDDD-BD11-49C7-8C20-A8E04FD91002}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CD10FFEC-94D3-49FB-906A-87FA60256109}
